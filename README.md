@@ -115,7 +115,9 @@ All instances include a persistent attached volume (your **My-Data** volume, 100
 
 ### Automatic shelving
 
-Once online, an instance stays active for **4 hours**. After that, it shelves itself automatically to conserve resources. Before shelving, the system checks whether the instance is idle. You can extend your active session by clicking the session-extension icon on the desktop (resets the 4-hour countdown). You can unshelve at any time using `/unshelve` — your data and work are intact.
+For **individual and course instances**, once online the instance stays active for **4 hours**. After that, it shelves itself automatically to conserve resources. Before shelving, the system checks whether the instance is idle. You can extend your active session by clicking the session-extension icon on the desktop (resets the 4-hour countdown). You can unshelve at any time using `/unshelve` — your data and work are intact.
+
+**Workshop instances** stay online continuously for the duration of the workshop and are not subject to the 4-hour auto-shelving policy.
 
 ### Expiration
 
