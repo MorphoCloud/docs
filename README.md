@@ -115,7 +115,7 @@ All instances include a persistent attached volume (your **My-Data** volume, 100
 
 ### Automatic shelving
 
-For **individual and course instances**, once online the instance stays active for **4 hours**. After that, it shelves itself automatically to conserve resources. Before shelving, the system checks whether the instance is idle. You can extend your active session by clicking the session-extension icon on the desktop (resets the 4-hour countdown). You can unshelve at any time using `/unshelve` — your data and work are intact.
+For **individual and course instances**, once online the instance stays active for **4 hours**. As the session limit approaches, a reminder popup appears on the desktop — if you dismiss it or do not respond, the instance shelves itself. You can also manually extend your session at any time by clicking the session-extension icon on the desktop, which resets the 4-hour countdown. You can unshelve at any time using `/unshelve` — your data remains intact, though your running applications will be closed.
 
 **Workshop instances** stay online continuously for the duration of the workshop and are not subject to the 4-hour auto-shelving policy.
 
@@ -182,9 +182,9 @@ Benefits: much better image quality, proper display scaling, and native copy/pas
 
 ## Important Notes
 
-1. **Opening an issue does not provision an instance.** After you open an instance request issue, an automatic validation check runs first. Once it posts a ✅ confirmation comment on your issue, you must then post `/create` to actually provision the instance.
+1. **Opening an issue does not provision an instance.** After you open an instance request issue, an automatic validation runs first. Once it posts a ✅ confirmation comment on your issue, you must then post `/create` to actually provision the instance.
 2. **You cannot change instance types** after an issue is created and approved. If you need a different flavor, open a new issue.
-3. **Resource availability varies.** JetStream2 is a shared national resource. If `/create` or `/unshelve` hangs, check [availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) and try again later.
+3. **Resource availability varies.** JetStream2 is a shared national resource. If `/create` or `/unshelve` hangs, check [availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) and try again later. Particularly for courses we cannot guarantee there will be instances available for everyone at the meeting time of the course. As such MorphoCloud is best used as an asynchronous learning tool in classroom. 
 4. **Save everything to MyData.** The root disk is small and ephemeral. All important files must go in `/media/volume/MyData`.
 
 ---
