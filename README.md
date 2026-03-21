@@ -6,6 +6,8 @@ MorphoCloud provides on-demand, high-performance cloud computing instances to su
 
 Instances are managed entirely through GitHub Issues. You request, control, and monitor your instance by opening an issue and posting commands as comments. All you need is a [GitHub account](https://github.com), request to become a member of the MorphoCloud organization on github and agree to the [Usage Terms](). 
 
+> **Important:** MorphoCloud membership grants you access to request instances, but does not guarantee that compute resources will be available at any given time. Instance availability depends on the current capacity of [JetStream2](https://jetstream-cloud.org/), a nationally shared research cloud. Before creating or unshelving an instance, we recommend checking the [real-time resource availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) dashboard.
+
 ---
 
 ## Access Pathways
@@ -41,7 +43,7 @@ For instructors or organizers running a short workshop (maximum 5 days) where al
 
 ### 3. Course Access (Semester/Class)
 
-This is for instructors who want their students to use MorphoCloud routinely as part of their course. This is different than each individual student applying for an instance. It is a two-step process and instructors are responsible collecting students github accounts so that a course specific team can be created by the MorphoCloud admins.  
+This is for instructors who want their students to use MorphoCloud routinely as part of their course. This is different than each individual student applying for an instance. The instructor registers the course with MorphoCloud, and students self-enroll by filling out the MorphoCloud Intake Form using the course path.
 
 **How to get access (instructor):**
 1. The instructor fills out the [Course Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSe0i03kZw0mdtB-PTMAMONWmfOrJubX8B2kuyCPhWt_E0KGrA/viewform)
