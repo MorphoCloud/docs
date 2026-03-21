@@ -17,7 +17,7 @@ MorphoCloud has three access pathways depending on how you will use it.
 For researchers and students who want a personal instance for their own work.
 
 **How to get access:**
-1. Fill out the [Individual Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) where you provide your contact information, github account name, and your use cases. (note that your email will be added to low volume MorphoCloud mailing list, which is used to report outages, updates to the workflow and upcoming events.)
+1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Individually**, and provide your contact information, GitHub account name, and your use cases. (note that your email will be added to low volume MorphoCloud mailing list, which is used to report outages, updates to the workflow and upcoming events.)
 
 2. You will receive a GitHub org invitation by email — accept it
 3. Once you are a member of the MorphoCloud organization, you can a new issue using the **Instance Request** template in the [MorphoCloud Instances repository](https://github.com/MorphoCloud/MorphoCloudInstancesTest)
@@ -33,7 +33,7 @@ For researchers and students who want a personal instance for their own work.
 For instructors or organizers running a short workshop (maximum 5 days) where all participants need simultaneous access.
 
 **How to get access:**
-1. The workshop organizer fills out the [Workshop Organizer Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSeGDN4l1XOVVOKIrMSwW7dVD1-XMk3I6FV_qNn6if-ZQTRuBA/viewform)
+1. The workshop organizer fills out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and selects **Organize a Workshop**
 2. The MorphoCloud team reviews the submission and, if approved, adds the organizer to the **WorkshopOrganizers** GitHub team
 3. The organizer then opens a **Workshop Request** issue in the MorphoCloud Instances repository and fills in the workshop details (dates, number of participants, instance flavor)
 4. Once the workshop request is approved, instances are provisioned for each participant — the organizer receives all connection credentials by email and is responsible for distributing them to participants.
@@ -49,20 +49,22 @@ This is for instructors who want their students to use MorphoCloud routinely as 
 **How to get access (instructor):**
 1. The instructor fills out the [Course Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSe0i03kZw0mdtB-PTMAMONWmfOrJubX8B2kuyCPhWt_E0KGrA/viewform)
 2. Once approved, the instructor receives:
-   - A pre-filled **Student Roster Form** link — submit this with your student GitHub usernames to enroll students
-   - A pre-filled **Instance Request link** — share this with students so they can open their own instance requests
-3. The instructor can resubmit the roster form at any time to add new students
+   - The **Course Team Slug** (e.g., `morphocloud-course-usu-herpetology`) — share this with students
+   - A link to the **MorphoCloud Intake Form** — students fill this out to self-enroll; no roster submission is needed from the instructor
+   - A pre-filled **Instance Request link** — share this with students so they can open their own instance requests after enrollment
 
 **How to get access (student):**
-1. Accept the GitHub organization invitation you receive by email after your instructor submits the roster
-2. Use the link provided by your instructor to open a **Course Instance Request** in the MorphoCloud Instances repository — this opens the same GitHub issue form you would find under New Issue, but with the Course Team Slug field already filled in for you
-3. A validation check runs automatically. Once it passes, post `/create` as a comment to provision your instance
+1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Part of an academic course**, and enter the Course Team Slug provided by your instructor
+2. Click the email verification link you receive — this triggers your GitHub org invitation
+3. Accept the GitHub organization invitation
+4. Use the link provided by your instructor to open a **Course Instance Request** in the MorphoCloud Instances repository — this opens the same GitHub issue form you would find under New Issue, but with the Course Team Slug field already filled in for you
+5. A validation check runs automatically. Once it passes, post `/create` as a comment to provision your instance
 
 **Instance lifespan:** Set by the instructor at course registration (e.g., the length of the semester).
 
 > **Note:** Course access is separate from individual access. If you want a personal instance for your own research outside the course — before, during, or after it — fill out the Individual Intake Form independently.
 >
-> **Privacy note:** Unlike individual users, course students do not submit a personal intake form to MorphoCloud. This means MorphoCloud does not collect or store students' email addresses or other contact information — only their GitHub usernames are known to us. The instructor retains all student contact information. At the end of the course github accounts associated with the course are removed from the MorphoCloud organization (unless the student also applied for a personal instance). 
+> **Privacy note:** Course students fill the MorphoCloud Intake Form using the course path — only their name, email, institution, GitHub username, and course team slug are collected. Your email is used solely to deliver instance credentials and is not shared outside MorphoCloud. At the end of the course, GitHub accounts associated with the course are removed from the MorphoCloud organization (unless the student also applied for a personal individual instance).
 
 ---
 
