@@ -20,9 +20,6 @@ For researchers and students who want a personal instance for their own work.
 1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Individually**, and provide your contact information, GitHub account name, and your use cases. (note that your email will be added to low volume MorphoCloud mailing list, which is used to report outages, updates to the workflow and upcoming events.)
 
 2. You will receive a GitHub org invitation by email — accept it
-3. Once you are a member of the MorphoCloud organization, you can a new issue using the **Instance Request** template in the [MorphoCloud Instances repository](https://github.com/MorphoCloud/MorphoCloudInstancesTest)
-4. A validation check runs automatically. Once it passes, post `/create` as a comment to provision your instance
-5. You will receive an email with the connection URL when your instance is online.
 
 **Instance lifespan:** 60 days by default, renewable once to 120 days using `/renew`.
 
@@ -50,21 +47,63 @@ This is for instructors who want their students to use MorphoCloud routinely as 
 1. The instructor fills out the [Course Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSe0i03kZw0mdtB-PTMAMONWmfOrJubX8B2kuyCPhWt_E0KGrA/viewform)
 2. Once approved, the instructor receives:
    - The **Course Team Slug** (e.g., `morphocloud-course-usu-herpetology`) — share this with students
-   - A link to the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) — students fill this out to self-enroll; no roster submission is needed from the instructor
+   - A link to the **MorphoCloud Intake Form** — students fill this out to self-enroll; no roster submission is needed from the instructor
    - A pre-filled **Instance Request link** — share this with students so they can open their own instance requests after enrollment
 
 **How to get access (student):**
 1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Part of an academic course**, and enter the Course Team Slug provided by your instructor
 2. Click the email verification link you receive — this triggers your GitHub org invitation
 3. Accept the GitHub organization invitation
-4. Use the link provided by your instructor to open a **Course Instance Request** in the MorphoCloud Instances repository — this opens the same GitHub issue form you would find under New Issue, but with the Course Team Slug field already filled in for you
-5. A validation check runs automatically. Once it passes, post `/create` as a comment to provision your instance
 
 **Instance lifespan:** Set by the instructor at course registration (e.g., the length of the semester).
 
 > **Note:** Course access is separate from individual access. If you want a personal instance for your own research outside the course — before, during, or after it — fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and select **Individually**.
 >
 > **Privacy note:** Course students fill the MorphoCloud Intake Form using the course path — only their name, email, institution, GitHub username, and course team slug are collected. Your email is used solely to deliver instance credentials and is not shared outside MorphoCloud. At the end of the course, GitHub accounts associated with the course are removed from the MorphoCloud organization (unless the student also applied for a personal individual instance).
+
+---
+
+## Using Your Instance
+
+Once you have accepted your GitHub organization invitation, provisioning and using your instance follows the same steps for all access types:
+
+1. Open a new issue in the [MorphoCloudInstances repository](https://github.com/MorphoCloud/MorphoCloudInstances):
+   - **Individual users**: use the **Instance Request** template
+   - **Course students**: use the pre-filled link provided by your instructor (the Course Team Slug is already filled in)
+2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance
+3. You will receive an email with the connection URL and credentials when your instance is online
+
+> **Workshop participants** do not open individual issues — the workshop organizer provisions instances for all participants and distributes credentials.
+
+---
+
+## Instance Lifecycle
+
+### States
+
+| State | Meaning |
+|-------|---------|
+| **Running** | Instance is active and accessible via the connection URL |
+| **Shelved** | Instance is paused and not consuming compute resources; your data is preserved |
+| **Deleted** | Instance and/or volume have been permanently removed |
+
+### Automatic shelving
+
+For **individual and course instances**, once online the instance stays active for **4 hours**. As the session limit approaches, a reminder popup appears on the desktop — if you dismiss it or do not respond, the instance shelves itself. You can also manually extend your session at any time by clicking the session-extension icon on the desktop, which resets the 4-hour countdown. You can unshelve at any time using `/unshelve` — your data remains intact, though your running applications will be closed.
+
+**Workshop instances** stay online continuously for the duration of the workshop and are not subject to the 4-hour auto-shelving policy.
+
+### Expiration
+
+Each instance has an expiration label (e.g., `expiration:60d`) applied when it is created. When the expiration date approaches:
+
+- Individual users receive a renewal notification and can use `/renew` to extend their instance (once, up to the maximum lifespan)
+- Course and workshop instances expire on the schedule set at registration
+- After expiration the instance is shelved, then deleted after a grace period
+
+### Your data volume
+
+Your **My-Data** volume persists independently of the instance. Even if your instance is shelved or deleted, the volume remains until you explicitly delete it with `/delete_volume` or `/delete_all`.
 
 ---
 
@@ -102,36 +141,6 @@ All instances include a persistent attached volume (your **My-Data** volume, 100
 | PyTorch | GPU-accelerated tensor library for AI tools |
 | R / RStudio | Provided by JetStream2 |
 | Python 3 | Provided by JetStream2 |
-
----
-
-## Instance Lifecycle
-
-### States
-
-| State | Meaning |
-|-------|---------|
-| **Running** | Instance is active and accessible via the connection URL |
-| **Shelved** | Instance is paused and not consuming compute resources; your data is preserved |
-| **Deleted** | Instance and/or volume have been permanently removed |
-
-### Automatic shelving
-
-For **individual and course instances**, once online the instance stays active for **4 hours**. As the session limit approaches, a reminder popup appears on the desktop — if you dismiss it or do not respond, the instance shelves itself. You can also manually extend your session at any time by clicking the session-extension icon on the desktop, which resets the 4-hour countdown. You can unshelve at any time using `/unshelve` — your data remains intact, though your running applications will be closed.
-
-**Workshop instances** stay online continuously for the duration of the workshop and are not subject to the 4-hour auto-shelving policy.
-
-### Expiration
-
-Each instance has an expiration label (e.g., `expiration:60d`) applied when it is created. When the expiration date approaches:
-
-- Individual users receive a renewal notification and can use `/renew` to extend their instance (once, up to the maximum lifespan)
-- Course and workshop instances expire on the schedule set at registration
-- After expiration the instance is shelved, then deleted after a grace period
-
-### Your data volume
-
-Your **My-Data** volume persists independently of the instance. Even if your instance is shelved or deleted, the volume remains until you explicitly delete it with `/delete_volume` or `/delete_all`.
 
 ---
 
