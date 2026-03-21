@@ -50,7 +50,7 @@ This is for instructors who want their students to use MorphoCloud routinely as 
 1. The instructor fills out the [Course Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSe0i03kZw0mdtB-PTMAMONWmfOrJubX8B2kuyCPhWt_E0KGrA/viewform)
 2. Once approved, the instructor receives:
    - The **Course Team Slug** (e.g., `morphocloud-course-usu-herpetology`) — share this with students
-   - A link to the **MorphoCloud Intake Form** — students fill this out to self-enroll; no roster submission is needed from the instructor
+   - A link to the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) — students fill this out to self-enroll; no roster submission is needed from the instructor
    - A pre-filled **Instance Request link** — share this with students so they can open their own instance requests after enrollment
 
 **How to get access (student):**
@@ -62,7 +62,7 @@ This is for instructors who want their students to use MorphoCloud routinely as 
 
 **Instance lifespan:** Set by the instructor at course registration (e.g., the length of the semester).
 
-> **Note:** Course access is separate from individual access. If you want a personal instance for your own research outside the course — before, during, or after it — fill out the Individual Intake Form independently.
+> **Note:** Course access is separate from individual access. If you want a personal instance for your own research outside the course — before, during, or after it — fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and select **Individually**.
 >
 > **Privacy note:** Course students fill the MorphoCloud Intake Form using the course path — only their name, email, institution, GitHub username, and course team slug are collected. Your email is used solely to deliver instance credentials and is not shared outside MorphoCloud. At the end of the course, GitHub accounts associated with the course are removed from the MorphoCloud organization (unless the student also applied for a personal individual instance).
 
