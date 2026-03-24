@@ -107,11 +107,13 @@ Each instance has an expiration label (e.g., `expiration:60d`) applied when it i
 
 Your **My-Data** volume persists independently of the instance. Even if your instance is shelved or deleted, the volume remains until you explicitly delete it with `/delete_volume` or `/delete_all`.
 
+Your entire home directory — including the Desktop, Documents, and Downloads folders — is stored on the My-Data volume. Files you save anywhere in your home directory will survive a `/delete_instance` + `/create` cycle. Only a `/delete_volume` or `/delete_all` permanently removes them.
+
 ---
 
 ## Instance Types
 
-All instances include a persistent attached volume (your **My-Data** volume, 100 GB) mounted at `/media/volume/MyData`. This is where you should keep all your files — the root filesystem (Desktop, Documents, Downloads) is small and not persistent across instance recreations.
+All instances include a persistent attached volume (your **My-Data** volume, 100 GB) mounted at `/media/volume/MyData`. Your entire home directory — Desktop, Documents, Downloads, and all other home folders — is stored on this volume, so files you save anywhere in your home directory survive instance deletion and recreation.
 
 | Flavor | RAM | CPUs | GPU | Best for |
 |--------|----:|-----:|-----|----------|
@@ -189,7 +191,7 @@ Benefits: much better image quality, proper display scaling, and native copy/pas
 
 **Best practice:** use both in tandem — Guacamole for file transfers, TurboVNC for interactive 3D visualization.
 
-> **Important:** Always save your work to `/media/volume/MyData`. The root filesystem (Desktop, Documents, Downloads) is not persistent — if your instance is deleted and recreated, only the MyData volume is retained.
+> **Important:** Always save your work inside your home directory (Desktop, Documents, Downloads, or anywhere under `~`). Your home directory lives on the My-Data volume and persists across instance deletions and recreations. Only a `/delete_volume` or `/delete_all` permanently removes your files.
 
 ---
 
@@ -198,7 +200,7 @@ Benefits: much better image quality, proper display scaling, and native copy/pas
 1. **Opening an issue does not provision an instance.** After you open an instance request issue, an automatic validation runs first. Once it posts a ✅ confirmation comment on your issue, you must then post `/create` to actually provision the instance.
 2. **You cannot change instance types** after an issue is created and approved. If you need a different flavor, open a new issue.
 3. **Resource availability varies.** JetStream2 is a shared national resource. If `/create` or `/unshelve` hangs, check [availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) and try again later. Particularly for courses we cannot guarantee there will be instances available for everyone at the meeting time of the course. As such MorphoCloud is best used as an asynchronous learning tool in classroom. 
-4. **Save everything to MyData.** The root disk is small and ephemeral. All important files must go in `/media/volume/MyData`.
+4. **Your home directory is persistent.** Desktop, Documents, Downloads, and all other folders under your home directory live on the My-Data volume and survive instance deletion and recreation. Only `/delete_volume` or `/delete_all` permanently removes them. Files written outside your home directory (e.g., to `/tmp` or the root disk) are not persistent.
 
 ---
 
