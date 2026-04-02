@@ -43,16 +43,16 @@ For instructors or organizers running a short workshop (maximum 5 days) where al
 
 ### 3. Course Access (Semester/Class)
 
-This is for instructors who want their students to use MorphoCloud routinely as part of their course. This is different than each individual student applying for an instance. The instructor registers the course with MorphoCloud, and students self-enroll by filling out the MorphoCloud Intake Form using the course path.
+This is for instructors who want their students to use MorphoCloud routinely as part of their course. This is different than each individual student applying for an instance. The instructor registers the course with MorphoCloud, and students self-enroll by filling out the MorphoCloud Intake Form using the course path. We create a course team for which the instructor becomes the primary point of contact for everyone in the team. Course instances and the associated course team is deleted at the end of the term automatically. If student(s) wants to continue using MorphoCloud after the course concludes, they need to use the **individual access** path outlined above. 
 
-**How to get access (instructor):**
+**How to request a course team to be created (instructor):**
 1. The instructor fills out the [Course Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSe0i03kZw0mdtB-PTMAMONWmfOrJubX8B2kuyCPhWt_E0KGrA/viewform)
 2. Once approved, the instructor receives:
    - The **Course Team Slug** (e.g., `morphocloud-course-usu-herpetology`) — share this with students
    - A link to the **MorphoCloud Intake Form** — students fill this out to self-enroll; no roster submission is needed from the instructor
    - A pre-filled **Instance Request link** — share this with students so they can open their own instance requests after enrollment
 
-**How to get access (student):**
+**How to get access (students):**
 1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Part of an academic course**, and enter the Course Team Slug provided by your instructor
 2. Click the email verification link you receive — this triggers your GitHub org invitation
 3. Accept the GitHub organization invitation
@@ -76,6 +76,8 @@ Once you have accepted your GitHub organization invitation, provisioning and usi
 3. You will receive an email with the connection URL and credentials when your instance is online
 
 > **Workshop participants** do not open individual issues — the workshop organizer provisions instances for all participants and distributes credentials.
+
+While using MorphoCloud, an organization member can have maximum of **two** instances concurrently. This can be two personal instances, or one course and one personal instance. 
 
 ---
 
