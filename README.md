@@ -69,7 +69,7 @@ This is for instructors who want their students to use MorphoCloud routinely as 
 
 Once you have accepted your GitHub organization invitation, provisioning and using your instance follows the same steps for all access types:
 
-1. Open a new issue in the [MorphoCloudInstances repository](https://github.com/MorphoCloud/MorphoCloudInstances):
+1. Open a new issue in the [MorphoCloudInstancesTest repository](https://github.com/MorphoCloud/MorphoCloudInstancesTest):
    - **Individual users**: use the **Instance Request** template
    - **Course students**: use the pre-filled link provided by your instructor (the Course Team Slug is already filled in)
 2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance
