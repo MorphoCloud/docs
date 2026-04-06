@@ -120,7 +120,7 @@ All instances include a persistent attached volume (your **My-Data** volume, 100
 | Flavor | RAM | CPUs | GPU | Best for |
 |--------|----:|-----:|-----|----------|
 | `g3.large` | 60 GB | 16 | A100 (20 GB) | General-purpose morphology and morphometrics, 3D Slicer, most SlicerMorph workflows |
-| `g4.xl` | 125 GB | 32 | L40S | Photogrammetry, NNInteractive, AI-assisted segmentation, large GPU workloads |
+| `g4.xl` | 125 GB | 32 | L40S (48GB) | Photogrammetry, NNInteractive, AI-assisted segmentation, large GPU workloads |
 | `m3.xl` | 125 GB | 32 | — | Computationally intensive tasks that don't require a GPU (e.g., image registration with ANTsPy) |
 | `r3.large` | 500 GB | 64 | — | Image registration with large datasets |
 | `r3.xl` | 1000 GB | 128 | — | Image registration with very large datasets |
