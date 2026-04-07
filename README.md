@@ -208,8 +208,7 @@ Benefits: much better image quality, proper display scaling, and native copy/pas
 
 ## Getting Help
 
-- **Email:** morphocloudportal@gmail.com
-- **GitHub Issues:** Open an issue in the MorphoCloud Instances repository for access or technical problems
+- **Email:** portal@morphocloud.org
 
 ---
 
