@@ -207,8 +207,9 @@ Benefits: much better image quality, proper display scaling, and native copy/pas
 ---
 
 ## Getting Help
+For general inquiries send us an email at **portal@morphocloud.org**
 
-- **Email:** portal@morphocloud.org
+For instance support, tag `@MorphoCloud/morphocloud-admins` in your specific issues page and explain what you need help with. 
 
 ---
 
