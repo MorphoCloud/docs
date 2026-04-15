@@ -191,6 +191,7 @@ Students can control their instance by posting commands as issue comments:
 | `/delete_instance` | Remove a stuck or inaccessible instance — must be followed by `/create` to start fresh |
 
 Students can ask for help by mentioning `@<instructor-handle>` or `@MorphoCloud/morphocloud-admins` in an issue comment.
+More information about how to access and use the MorphoCloud can be found at: https://github.com/MorphoCloud/docs?tab=readme-ov-file#connecting-to-your-instance
 
 ## Contact information for MorphoCloud
 If you have questions or concerns, please get in touch with us at portal@morphocloud.org
