@@ -28,7 +28,7 @@ If you do not already have one, register for a free ACCESS account:
 **https://identity.access-ci.org/new-user**
 
 ACCESS accounts are free and open to any US-based researcher or educator. No
-NSF award is required.
+NSF award is required. Resources are compeletely free-of-charge to eligible researchers.
 
 ---
 
@@ -51,12 +51,22 @@ For most courses, **Explore ACCESS** is the right starting point. Use the
 to estimate how many credits you will need based on your enrollment and
 instance duration.
 
+A `g3.large` instance uses 32 SU/h. For a class of 30 (students + instructors + TAs) using MorphoCloud an average of 10 h/week over a 16-week semester:
+
+> 32 SU/h × 30 instances × 10 h/week × 16 weeks ≈ **154,000 SU** — well within an Explore allocation.
+
+You will also need approximately **5,400 SU** for the dedicated runner VM that manages course automation (2 SU/h × 24 h × 7 days × 16 weeks).
+
+If you plan to share data with your class, request a small storage allocation on JS2 as well.
+
 ### Apply for your allocation
 
 Go to: **https://allocations.access-ci.org/get-your-first-project**
 
 For guidance on what to include in the application, see:
 [Prepare Requests](https://allocations.access-ci.org/prepare-requests)
+
+An Explore allocation does not require extensive documentation. You can cite the existing MorphoCloud paper and note that you want to leverage the existing MorphoCloud infrastructure for your course.
 
 ---
 
@@ -65,9 +75,7 @@ For guidance on what to include in the application, see:
 > ⚠️ **Do this at application time — adding resource types later takes 24–72 hours
 > and will delay your course setup.**
 
-MorphoCloud course instances use **`g3` (GPU)** flavors for student work. The
-self-hosted runner VM that manages automation uses an **`m3` (CPU-only)** flavor.
-You need both enabled on your JS2 allocation before setup can proceed.
+MorphoCloud course instances use **`g3` (GPU)** flavors for student work. The self-hosted runner VM that manages automation uses an **`m3` (CPU-only)** flavor. You must secure both resource types on your JS2 allocation before course setup can proceed.
 
 When submitting or managing your JS2 allocation via the
 [ACCESS allocations portal](https://allocations.access-ci.org/), request:
@@ -83,45 +91,15 @@ a supplement request:
 
 ---
 
-## Step 4 — Set Up Your Allocation in Exosphere
+## Step 4 — Add MorphoCloud to Your ACCESS Allocation
 
-Once your allocation is approved and active, log in to Exosphere with your
-ACCESS credentials:
-
-**https://jetstream2.exosphere.app**
-
-Confirm that your allocation appears and that you can see both `g3` and `m3`
-instance flavors when creating an instance.
+Once your allocation is approved and active on ACCESS, add the **magalab** account as an allocation manager and assign it to manage the JS2 resources only (if you have resources from other providers, do not include those). This is a mandatory step before you can submit the course creation form.
 
 ---
 
-## Step 5 — Prepare Your Student Roster Spreadsheet
+## Step 5 — Submit the MorphoCloud Course Intake Form
 
-Before submitting the MorphoCloud intake form, set up the roster spreadsheet
-that MorphoCloud uses to look up student email addresses for sending instance
-credentials.
-
-1. **Make a copy** of the MorphoCloud roster template:\
-   **https://docs.google.com/spreadsheets/d/1N_av-7BGzXoCSx9K7LaiADmeEP9JGcRVZHFSwdNaHt0/copy**
-
-2. Fill in your roster:
-   - **Column A (`github_handle`)** — student GitHub usernames (without `@`)
-   - **Column B (`email`)** — student email addresses
-   - Include your own GitHub handle and email in the roster
-
-3. **Share the sheet read-only** with `morphocloudportal@gmail.com`
-   (MorphoCloud's service account)
-
-4. **Note your sheet ID** — the long string between `/d/` and `/edit` in the
-   Google Sheets URL. You will provide this to the MorphoCloud admin after
-   approval.
-
----
-
-## Step 6 — Submit the MorphoCloud Course Intake Form
-
-Once your ACCESS allocation is active and your roster sheet is ready, submit
-the intake form:
+Once your ACCESS allocation is active and magalab has been added as allocation manager, submit the intake form:
 
 **https://docs.google.com/forms/d/e/1FAIpQLSdbH8hcd6bJlNjcJQb21mK-MvjL-lLkzHwDfuvmO-h1YjsHEQ/viewform**
 
@@ -129,24 +107,50 @@ You will be asked for:
 
 | Field | Notes |
 |-------|-------|
+| ACCESS Allocation ID | The allocation ID shown in your ACCESS portal (e.g. `TRA250020`) |
+|Acknowledgment | that you added magalab as an allocation manager |
 | Instructor name and email | Must match your GitHub account email |
 | GitHub username | Your personal GitHub handle |
-| Institution | Used to generate the course ID (e.g. `ETSU-A100`) |
-| Course name | E.g. `BIOL A100` |
-| Expected enrollment | Number of students |
-| Instance duration | How many days students need access |
-| Instance flavor | Select the GPU flavor appropriate for your software needs |
-| ACCESS Allocation ID | The allocation ID shown in your ACCESS portal (e.g. `TRA250020`) |
+| Institution | Used to generate the course ID (e.g. `ETSU`) |
+| Course name | E.g. `BIOL 100` |
+| Expected enrollment | Number of students + instructors|
+| Instance duration | How many days students need access | 
+| Instance flavor | `g3.large` is strongly recommended — `g3.xl` has historically had very limited availability on JS2 |
+
+> **Note:** The instance flavor is fixed for the entire course — all students share the same flavor.
 
 After submission, a MorphoCloud admin will review your request and email you
 when it is approved (typically within 1–2 business days).
 
 ---
 
+## Step 6 — Prepare Your Student Roster Spreadsheet
+
+When the course starts, you need to create an enrollment roster spreadsheet
+that MorphoCloud uses to look up student email addresses for sending instance
+credentials. Collect this information during your first class meeting and enter into the form linked below.
+
+1. **Make a copy** of the MorphoCloud roster template:\
+   **https://docs.google.com/spreadsheets/d/1N_av-7BGzXoCSx9K7LaiADmeEP9JGcRVZHFSwdNaHt0/copy**
+
+2. Fill in your roster:
+   - **Column A (`github_handle`)** — student GitHub usernames (without `@`)
+   - **Column B (`email`)** — student email addresses
+   - Include your own GitHub handle and email in the roster (or anyone else involved with the course)
+
+3. **Share the sheet read-only** with `morphocloudportal@gmail.com`
+   (This is a service account. This account is not checked. Do not try to contact or email anything to this address.)
+
+4. **Note your sheet ID** — the long string between `/d/` and `/edit` in the
+   Google Sheets URL. MorphoCloud admins will ask this when setting up your repository.
+
+The roster is dynamic — you can add or remove students at any time.
+
+---
+
 ## Step 7 — Post-Approval: Provide Your Roster Sheet ID
 
-After receiving the approval email, reply with your **Google Sheet roster ID**
-(from Step 5). The admin will configure your course repo to use it for email
+After receiving the approval email, contact the MorphoCloud admins (portal@morphocloud.org) with your **Google Sheet roster ID** and the course repo name (from Step 6). The admin will configure your course repo to use it for email
 lookups.
 
 ---
@@ -158,14 +162,16 @@ GitHub repo (`MC-<course-id>`).
 
 To enroll students:
 
-1. Open the `students.txt` file in your course repo
+1. Open `students.txt` in your course repo (it is pre-created with instructions)
 2. Copy the `github_handle` column from your roster spreadsheet
-3. Paste the handles into `students.txt`, one per line
+3. Add the handles below the comment lines, one per line — comments are automatically ignored
 4. Commit and push — enrollment runs automatically via GitHub Actions
 5. Students will receive a GitHub invitation to the MorphoCloud org and course
    team; they must accept it before requesting instances
 
-To add students later in the semester, update `students.txt` and push again.
+To add students later in the semester, update `students.txt` and push again. This automatically triggers a GitHub Action that invites the new students to the MorphoCloud organization and the course team.
+
+> **Important:** Students must accept both invitations within **7 days** or they will expire. To accept, students go to their GitHub profile → **Organizations** and click Accept on each pending invitation.
 
 ---
 
@@ -176,9 +182,18 @@ the course repo using the **Course Instance Request** issue template. They will
 receive credential emails when their instance is ready.
 
 Students can control their instance by posting commands as issue comments:
-- `/shelve` — pause the instance (preserves work, stops billing)
-- `/unshelve` — resume a shelved instance
-- `/email` — resend credential email
+| Command | Action |
+|---------|--------|
+| `/create` | Create the instance and storage volume from scratch |
+| `/shelve` | Pause the instance (preserves work, stops billing) |
+| `/unshelve` | Resume a shelved instance |
+| `/email` | Resend the credential email |
+| `/delete_instance` | Remove a stuck or inaccessible instance — must be followed by `/create` to start fresh |
+
+Students can ask for help by mentioning `@<instructor-handle>` or `@MorphoCloud/morphocloud-admins` in an issue comment.
+
+## Contact information for MorphoCloud
+If you have questions or concerns, please get in touch with us at portal@morphocloud.org
 
 ---
 
