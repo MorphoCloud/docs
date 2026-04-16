@@ -193,7 +193,22 @@ Students can control their instance by posting commands as issue comments:
 Students can ask for help by mentioning `@<instructor-handle>` or `@MorphoCloud/morphocloud-admins` in an issue comment.
 More information about how to access and use the MorphoCloud can be found at: https://github.com/MorphoCloud/docs?tab=readme-ov-file#connecting-to-your-instance
 
+---
+
+## Customizing Course Settings
+
+Your course repo exposes a small number of configuration variables that you can adjust without contacting MorphoCloud admins.
+Go to your course repo on GitHub → **Settings → Secrets and variables → Actions → Variables**.
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `INSTANCE_SHELVING_TIMEOUT_HRS` | `4` | How many hours a student instance may run before it is automatically shelved. Increase this (e.g. to `8`) if your class sessions or lab exercises regularly exceed 4 hours. Students can also extend their own session by 4 hours using the in-browser popup that appears 30 minutes before shelving, regardless of this setting. |
+
+To change a variable: click the variable name → **Edit** → update the value → **Save**.
+The new value takes effect on the next scheduled check (within 5 minutes).
+
 ## Contact information for MorphoCloud
+
 If you have questions or concerns, please get in touch with us at portal@morphocloud.org
 
 ---
