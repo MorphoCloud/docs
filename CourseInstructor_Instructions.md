@@ -141,24 +141,29 @@ credentials. Collect this information during your first class meeting and enter 
 3. **Share the sheet read-only** with `morphocloudportal@gmail.com`
    (This is a service account. This account is not checked. Do not try to contact or email anything to this address.)
 
-4. **Note your sheet ID** — the long string between `/d/` and `/edit` in the
-   Google Sheets URL. MorphoCloud admins will ask this when setting up your repository.
+4. **Copy your sheet ID** — the long string between `/d/` and `/edit` in the
+   Google Sheets URL. You will need it in Step 7.
 
 The roster is dynamic — you can add or remove students at any time.
 
 ---
 
-## Step 7 — Post-Approval: Provide Your Roster Sheet ID
+## Step 7 — Set the Roster Sheet ID in Your Course Repo
 
-After receiving the approval email, contact the MorphoCloud admins (portal@morphocloud.org) with your **Google Sheet roster ID** and the course repo name (from Step 6). The admin will configure your course repo to use it for email
-lookups.
+After receiving the approval email, you will have access to your course
+GitHub repo (`MC-<course-id>`). Set the roster sheet ID so MorphoCloud can look up student emails:
+
+1. Go to your course repo on GitHub → **Settings → Secrets and variables → Actions → Variables**
+2. Click **New repository variable**
+3. Name: `MORPHOCLOUD_STUDENT_ROSTER_SHEET_ID`
+4. Value: the sheet ID you copied in Step 6
+5. Click **Add variable**
+
+Without this, instance credential emails cannot be sent to students.
 
 ---
 
 ## Step 8 — Enroll Students in the Course GitHub Team
-
-After the admin confirms setup is complete, you will have access to your course
-GitHub repo (`MC-<course-id>`).
 
 To enroll students:
 
