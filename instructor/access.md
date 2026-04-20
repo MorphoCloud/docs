@@ -85,10 +85,15 @@ This is well within the 400,000 credit Explore limit. Adjust the weekly hours an
 2. Click **"Get Your First Project"** or go to [https://allocations.access-ci.org/get-your-first-project](https://allocations.access-ci.org/get-your-first-project)
 3. Select **Explore ACCESS** as the project type
 4. Fill in the request form:
-   - Project title and abstract describing your planned work
+   - **Project Title** — e.g., "Leveraging MorphoCloud for [COURSE NAME]"
+   - **Public overview** — paste the boilerplate abstract from Step 4 (adapted with your details)
+   - **Keywords** — e.g., `MorphoCloud, 3D Slicer, SlicerMorph, morphometrics, cloud computing`
+   - **How do you plan to use this project?** — select **Classroom / Training**
+   - **Fields of Science** — select the primary field that best matches your course (e.g., Biology, Anatomy)
    - Supporting grant info (if any — a grant is **not required**)
-   - Your field of science
-5. Submit
+5. In the **Related Personnel** section, add **magalab** as an **Allocation Manager**. This gives the MorphoCloud team the access needed to provision and manage instances on your behalf.
+6. In the **Available Resources** section, check **ACCESS Credits**.
+7. Submit
 
 ## Step 6: Exchange Credits for JetStream2 Time
 
@@ -96,8 +101,4 @@ After your request is approved:
 
 1. Go to your project at [https://allocations.access-ci.org/](https://allocations.access-ci.org/)
 2. **Exchange** your ACCESS Credits for an allocation on **JetStream2**
-3. The Resource Provider (Indiana University) reviews and approves the exchange (usually quick)
-
-## Step 7: Add MorphoCloud to Your Allocation
-
-- Add **magalab** as an allocation manager to all your JetStream2 resources you are approved for. This gives the MorphoCloud team the access needed to provision and manage instances on your behalf. 
+3. The Resource Provider (Indiana University) reviews and approves the exchange (usually quick) 
