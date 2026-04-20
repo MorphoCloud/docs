@@ -6,7 +6,7 @@ MorphoCloud provides on-demand, high-performance cloud computing instances to su
 
 Instances are managed entirely through GitHub Issues. You request, control, and monitor your instance by opening an issue and posting commands as comments. All you need is a [GitHub account](https://github.com), request to become a member of the MorphoCloud organization on github and agree to the [Usage Terms](). 
 
-> **Important:** MorphoCloud membership grants you access to request instances, but does not guarantee that compute resources will be available at any given time. Instance availability depends on the current capacity of [JetStream2](https://jetstream-cloud.org/), a nationally shared research cloud. Before creating or unshelving an instance, we recommend checking the [real-time resource availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) dashboard.
+> **Important:** MorphoCloud membership grants you access to request instances, but does not guarantee that compute resources will be available at any given time. Instance availability depends on the current capacity of [JetStream2](https://jetstream-cloud.org/), a nationally shared research cloud. Before creating or unshelving an instance, we recommend always checking the [real-time resource availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) dashboard.
 
 ---
 
@@ -41,27 +41,12 @@ For instructors or organizers running a short workshop (maximum 5 days) where al
 
 ---
 
-### 3. Course Access (Semester/Class)
+### 3. Use MorphoCloud For an Academic Course (Semester/Class)
 
-This is for instructors who want their students to use MorphoCloud routinely as part of their course. This is different than each individual student applying for an instance. The instructor registers the course with MorphoCloud, and students self-enroll by filling out the MorphoCloud Intake Form using the course path. We create a course team for which the instructor becomes the primary point of contact for everyone in the team. Course instances and the associated course team is deleted at the end of the term automatically. If student(s) wants to continue using MorphoCloud after the course concludes, they need to use the **individual access** path outlined above. 
+This is for instructors who want their students to use MorphoCloud routinely as part of their course. The course is set up as a dedicated and private repository, which is removed after the course ends. Instructors can tailor the platform to better align with specific course objectives and actively maintain the course enrollment.
 
-**How to request a course team to be created (instructor):**
-1. The instructor fills out the [Course Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSe0i03kZw0mdtB-PTMAMONWmfOrJubX8B2kuyCPhWt_E0KGrA/viewform)
-2. Once approved, the instructor receives:
-   - The **Course Team Slug** (e.g., `morphocloud-course-usu-herpetology`) — share this with students
-   - A link to the **MorphoCloud Intake Form** — students fill this out to self-enroll; no roster submission is needed from the instructor
-   - A pre-filled **Instance Request link** — share this with students so they can open their own instance requests after enrollment
-
-**How to get access (students):**
-1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Part of an academic course**, and enter the Course Team Slug provided by your instructor
-2. Click the email verification link you receive — this triggers your GitHub org invitation
-3. Accept the GitHub organization invitation
-
-**Instance lifespan:** Set by the instructor at course registration (e.g., the length of the semester).
-
-> **Note:** Course access is separate from individual access. If you want a personal instance for your own research outside the course — before, during, or after it — fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and select **Individually**.
->
-> **Privacy note:** Course students fill the MorphoCloud Intake Form using the course path — only their name, email, institution, GitHub username, and course team slug are collected. Your email is used solely to deliver instance credentials and is not shared outside MorphoCloud. At the end of the course, GitHub accounts associated with the course are removed from the MorphoCloud organization (unless the student also applied for a personal individual instance).
+If you are interested, please [review the instructions](./instructor/Overview.md).
+Questions? Contact us at [portal@morphocloud.org](mailto:portal@morphocloud.org).
 
 ---
 
@@ -71,7 +56,6 @@ Once you have accepted your GitHub organization invitation, provisioning and usi
 
 1. Open a new issue in the [MorphoCloudInstancesTest repository](https://github.com/MorphoCloud/MorphoCloudInstancesTest):
    - **Individual users**: use the **Instance Request** template
-   - **Course students**: use the pre-filled link provided by your instructor (the Course Team Slug is already filled in)
 2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance
 3. You will receive an email with the connection URL and credentials when your instance is online
 
@@ -169,7 +153,7 @@ Post any of the following as a comment on your instance issue. Only one command 
 
 ### Course instances
 
-Same as above **except `/renew`** — course instances expire on the fixed course schedule and cannot be individually renewed.
+Same as above **except `/renew`** — course instances expire on the fixed course schedule and cannot be renewed.
 
 ---
 
