@@ -41,9 +41,9 @@ For instructors or organizers running a short workshop (maximum 5 days) where al
 
 ---
 
-### 3. Use MorphoCloud For an Academic Course (Semester/Class)
+### 3. Use MorphoCloud For an Academic Course 
 
-This is for instructors who want their students to use MorphoCloud routinely as part of their course. The course is set up as a dedicated and private repository, which is removed after the course ends. Instructors can tailor the platform to better align with specific course objectives and actively maintain the course enrollment.
+This is for instructors who want their students to use MorphoCloud routinely as part of their course. The course is set up as a dedicated and private repository only accessible to instructor(s) and the students they invite. Repository is removed 30 days after the course concludes. Instructors can tailor the platform to better align with specific course objectives and actively maintain the course enrollment.
 
 If you are interested, please [review the instructions](./instructor/Overview.md).
 Questions? Contact us at [portal@morphocloud.org](mailto:portal@morphocloud.org).
