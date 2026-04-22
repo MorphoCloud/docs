@@ -31,7 +31,7 @@ See the [post-repo setup guide](post-repo.md) for detailed steps. In summary:
 ## Maintaining Enrollment
 
 - **Adding students:** If a student joins your course late, add their GitHub username and email to the roster sheet, then add their username to `Students.txt`. The invitation is sent automatically — they just need to accept it to start using the platform.
-- **Removing students:** If a student drops the course, remove their GitHub username from the team list. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions on how to do this.
+- **Removing students:** If a student drops the course, you need to remove their GitHub username from the course team list, which is independent of the Students.txt in your repo. Removing them from Students.txt will not be enough. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions on how to do this.
 - **Checking usage:** MorphoCloud provides tools to check which students on your roster have already onboarded (i.e., accepted invitation and joined the course repo). Ask MorphoCloud admins how to access and use it.
 
 ## Need Help?
