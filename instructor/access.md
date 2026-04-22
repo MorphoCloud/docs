@@ -12,7 +12,7 @@ Go to [https://identity.access-ci.org/new-user](https://identity.access-ci.org/n
 
 Full policy: [https://allocations.access-ci.org/allocations-policy#eligibility](https://allocations.access-ci.org/allocations-policy#eligibility)
 
-You are eligible to be PI on an Explore allocation if you are:
+**You are eligible to be PI** on an Explore allocation if you are:
 
 - A researcher or educator at a **U.S.-based** academic institution, nonprofit, FFRDC, or military academy
 
