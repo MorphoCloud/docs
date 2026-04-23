@@ -16,14 +16,16 @@ MorphoCloud uses a Google Sheet to look up student email addresses for sending i
    [roster.morphocloud.org](https://roster.morphocloud.org)
 
 2. Fill in the roster:
-   - **Column A (`github_handle`)** — student GitHub usernames (without `@`)
-   - **Column B (`email`)** — student email addresses
-   - Include yourself and any TAs in the roster (you can enroll the students later -see below)
+   - **Column A (`github_handle`)** — GitHub usernames (without `@`)
+   - **Column B (`email`)** — email addresses
+   - Include yourself and any TAs in the roster first (you can enroll the students later -see below)
 
 3. **Share the sheet read-only** with `morphocloudportal@gmail.com`\
    (This is an automated service account — do not email this address.)
 
-4. **Copy your spreadsheet URL** — you will need it in the next step.
+4. **Copy your spreadsheet URL** — (red highlight in the screenshot) you will need it in the next step.
+
+<img width="604" height="541" alt="image" src="https://github.com/user-attachments/assets/8a418858-dfdf-4052-b9fa-1c162ea48c54" />
 
 ## Step 3: Set the Roster Sheet URL in Your Course Repository
 
@@ -33,7 +35,8 @@ MorphoCloud uses a Google Sheet to look up student email addresses for sending i
 4. Paste the full Google Sheets URL from Step 2 (MorphoCloud extracts the sheet ID automatically)
 5. Click **Save**
 
-Without this, instance credential emails cannot be sent to students.
+Without this, instance credential (how to access, passwords etc.) emails cannot be sent.
+
 
 ## Step 4: Review Course Settings (Before Creating Any Instances)
 
