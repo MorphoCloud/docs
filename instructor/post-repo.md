@@ -108,6 +108,13 @@ More information on connecting to instances: [MorphoCloud docs](https://github.c
 - **Adding students:** Add their GitHub username and email to the roster sheet, then add their username to `Students.txt` and push. The invitation is sent automatically.
 - **Removing students:** Remove their GitHub username from the team list. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions.
 
+## Important for courses with more than 9 students: 
+When a new allocation is created on JetStream2, there is a default hard quota of 25 instances and 10 volumes per allocation.  This needs to be increased for the infrastructure to function correctly. The new quotas you will need should be **total number of people in the course (inclusive of instructors) + 2** (one reserved for the MorphoCloud server, one as buffer). E.g., if your total enrollment is 30, ask for your quota to be increased to 32 **for both instances and volumes**.  
+
+You need to [open a support ticket with the ACCESS team](https://support.access-ci.org/help-ticket), and request to increase the instance and volume quota to the enrollment + 1 of your course. Here is boilerplate you can use for your request:
+
+`We use JetStream2 and MorphoCloud for the XYZ course and request that both the instance and volume quotas on allocation BIO-XXXXXX be increased to YY to support all enrolled students. Each instance requires its corresponding volume storage, so both quotas must be increased simultaneously.`
+
 ## Need Help?
 
 Contact the MorphoCloud team at [portal@morphocloud.org](mailto:portal@morphocloud.org).
