@@ -4,7 +4,7 @@
 
 MorphoCloud provides on-demand, high-performance cloud computing instances to support computational morphology, 3D morphometrics, and biomedical imaging research. Instances run on [JetStream2](https://jetstream-cloud.org/), a national research cloud operated by Indiana University and funded through [ACCESS](https://access-ci.org/). Each instance comes pre-loaded with [3D Slicer](https://download.slicer.org/), [SlicerMorph](https://slicermorph.org/), and a suite of additional tools (see [Installed Software](#installed-software) below), and is accessible from any web browser — no local installation required.
 
-Instances are managed entirely through GitHub Issues. You request, control, and monitor your instance by opening an issue and posting commands as comments. All you need is a [GitHub account](https://github.com), request to become a member of the MorphoCloud organization on github and agree to the [Usage Terms](). 
+Instances are managed entirely through GitHub Issues. You request, control, and monitor your instance by opening an issue and posting commands as comments. To get started you'll need an [ORCID iD](https://orcid.org) (free to create), a [GitHub account](https://github.com), and you must agree to the [Usage Terms](./terms.MD).
 
 > **Important:** MorphoCloud membership grants you access to request instances, but does not guarantee that compute resources will be available at any given time. Instance availability depends on the current capacity of [JetStream2](https://jetstream-cloud.org/), a nationally shared research cloud. Before creating or unshelving an instance, we recommend always checking the [real-time resource availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) dashboard.
 
@@ -19,9 +19,13 @@ MorphoCloud has three access pathways depending on how you will use it.
 For researchers and students who want a personal instance for their own work.
 
 **How to get access:**
-1. Fill out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform), select **Individually**, and provide your contact information, GitHub account name, and your use cases. (note that your email will be added to low volume MorphoCloud mailing list, which is used to report outages, updates to the workflow and upcoming events.)
+1. Go to [join.morphocloud.org](https://join.morphocloud.org).
+2. Sign in with your [ORCID iD](https://orcid.org) — the free, portable researcher identifier used by NSF, NIH, and most journals. (If you don't have one, you can create one in about 30 seconds during the signup flow.)
+3. Fill in the form: your email address, institution, GitHub username, career stage, intended use, and accept the Terms of Use.
+4. Confirm your email by clicking the link we send you. Your GitHub organization invitation is sent automatically once your email is verified.
+5. Accept the GitHub organization invitation from your [GitHub organizations page](https://github.com/settings/organizations).
 
-2. You will receive a GitHub org invitation by email — accept it
+> Your email is added to a low-volume MorphoCloud announcement list (outages, workflow updates, upcoming events). Your ORCID iD, institution, and use-case description are kept for NSF reporting purposes.
 
 **Instance lifespan:** 60 days by default, renewable once to 120 days using `/renew`.
 
@@ -32,9 +36,9 @@ For researchers and students who want a personal instance for their own work.
 For instructors or organizers running a short workshop (maximum 5 days) where all participants need simultaneous access.
 
 **How to get access:**
-1. The workshop organizer fills out the [MorphoCloud Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and selects **Organize a Workshop**
-2. The MorphoCloud team reviews the submission and, if approved, adds the organizer to the **WorkshopOrganizers** GitHub team
-3. The organizer then opens a **Workshop Request** issue in the MorphoCloud Instances repository and fills in the workshop details (dates, number of participants, instance flavor)
+1. The workshop organizer fills out the [MorphoCloud Workshop Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and selects **Organize a Workshop**.
+2. The MorphoCloud team reviews the submission and, if approved, adds the organizer to the **WorkshopOrganizers** GitHub team.
+3. The organizer then opens a **Workshop Request** issue in the MorphoCloud Instances repository and fills in the workshop details (dates, number of participants, instance flavor).
 4. Once the workshop request is approved, instances are provisioned for each participant — the organizer receives all connection credentials by email and is responsible for distributing them to participants.
 
 **Instance lifespan:** Set per workshop by the MorphoCloud team.
@@ -54,10 +58,10 @@ Questions? Contact us at [portal@morphocloud.org](mailto:portal@morphocloud.org)
 
 Once you have accepted your GitHub organization invitation, provisioning and using your instance follows the same steps for all access types:
 
-1. Open a new issue in the [MorphoCloudInstancesTest repository](https://github.com/MorphoCloud/MorphoCloudInstancesTest):
+1. Open a new issue in the [MorphoCloudInstances repository](https://github.com/MorphoCloud/MorphoCloudInstances):
    - **Individual users**: use the **Instance Request** template
-2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance
-3. You will receive an email with the connection URL and credentials when your instance is online
+2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance.
+3. You will receive an email with the connection URL and credentials when your instance is online.
 
 > **Workshop participants** do not open individual issues — the workshop organizer provisions instances for all participants and distributes credentials.
 
