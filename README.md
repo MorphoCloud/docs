@@ -20,12 +20,12 @@ For researchers and students who want a personal instance for their own work.
 
 **How to get access:**
 1. Go to [join.morphocloud.org](https://join.morphocloud.org).
-2. Sign in with your [ORCID iD](https://orcid.org) — the free, portable researcher identifier used by NSF, NIH, and most journals. (If you don't have one, you can create one in about 30 seconds during the signup flow.)
+2. Sign in with your [ORCID iD](https://orcid.org) — the free, portable researcher identifier. (If you don't have one already, you can create one in about 30 seconds during the signup.)
 3. Fill in the form: your email address, institution, GitHub username, career stage, intended use, and accept the Terms of Use.
 4. Confirm your email by clicking the link we send you. Your GitHub organization invitation is sent automatically once your email is verified.
 5. Accept the GitHub organization invitation from your [GitHub organizations page](https://github.com/settings/organizations).
 
-> Your email is added to a low-volume MorphoCloud announcement list (outages, workflow updates, upcoming events). Your ORCID iD, institution, and use-case description are kept for NSF reporting purposes.
+> Your email is added to a low-volume MorphoCloud announcement list (outages, workflow updates, upcoming events). 
 
 **Instance lifespan:** 60 days by default, renewable once to 120 days using `/renew`.
 
@@ -33,7 +33,7 @@ For researchers and students who want a personal instance for their own work.
 
 ### 2. Workshop Access
 
-For instructors or organizers running a short workshop (maximum 5 days) where all participants need simultaneous access.
+For instructors or organizers running a short workshop (5 days max) where all participants need simultaneous access.
 
 **How to get access:**
 1. The workshop organizer fills out the [MorphoCloud Workshop Intake Form](https://docs.google.com/forms/d/e/1FAIpQLSez2afddl8G-zM7iGYEFUGuk3221NhuswSpk20hmOTyVS0xOA/viewform) and selects **Organize a Workshop**.
