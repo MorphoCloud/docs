@@ -58,7 +58,7 @@ Questions? Contact us at [portal@morphocloud.org](mailto:portal@morphocloud.org)
 
 Once you have accepted your GitHub organization invitation, provisioning and using your instance follows the same steps for all access types:
 
-1. Open a new issue in the [MorphoCloudInstances repository](https://github.com/MorphoCloud/MorphoCloudInstances):
+1. Open a new issue in the [Instances repository](https://github.com/MorphoCloud/Instances/issues/new/choose):
    - **Individual users**: use the **Instance Request** template
 2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance.
 3. You will receive an email with the connection URL and credentials when your instance is online.
