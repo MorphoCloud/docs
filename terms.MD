@@ -46,7 +46,13 @@ Users are strictly prohibited from:
 
 ## 5. Acknowledgment of Support
 
-If you use MorphoCloud for your project, you are required to acknowledge the MorphoCloud project and our funders in any product (presentations, papers, project proposals, etc.) that results from this work. Please use the following statement:
+If you use MorphoCloud for your project, you are required to cite our paper and acknowledge the MorphoCloud project and our funders in any product (presentations, papers, project proposals, etc.) that results from this work.
+
+Please cite our paper:
+
+> Maga, A. M., & Fillion-Robin, J.-C. (2026). MorphoCloud: Democratizing Access to High-Performance Computing for Morphological Data Analysis. F1000Research. https://doi.org/10.12688/f1000research.176328.1
+
+And acknowledge our funders with the following statement:
 
 > "This study relied on cyberinfrastructure supported by grants from the National Science Foundation (MorphoCloud: DBI/2301405; JetStream2: OAC/2005506; Exosphere: TI/2229642) and the National Institutes of Health (MorphoCloud: NICHD HD104435)."
 
