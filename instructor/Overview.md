@@ -15,7 +15,7 @@ MorphoCloud provides on-demand, GPU-accelerated virtual desktops for courses tha
 ## Steps to Get Your MorphoCloud Course Repository Created
 
 1. [Obtain your ACCESS Explore allocation and add MorphoCloud to it](access.md).
-2. [Fill out the MorphoCloud course intake form](https://course.morphocloud.org) — do this **at least four weeks before the start of the course** so we have time to review and set up your environment.
+2. [Fill out the MorphoCloud course intake form](https://forms.gle/ibq2vJsrymAiqFmS8) — do this **at least four weeks before the start of the course** so we have time to review and set up your environment.
 3. Follow the instructions provided by the MorphoCloud admin team, including joining the MorphoCloud GitHub Organization and your course-specific repository.
 4. Once your course repository is created, follow the [post-repo setup guide](post-repo.md) to configure your roster, review settings, test your instance, and enroll students.
 
