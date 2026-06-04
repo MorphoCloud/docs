@@ -209,7 +209,7 @@ If you use MorphoCloud for your research, please cite the platform article and i
 
 **Citation:**
 
-> Maga AM and Fillion-Robin J-C. MorphoCloud: Democratizing Access to High-Performance Computing for Morphological Data Analysis. *F1000Research* 2026, **15**:53. https://doi.org/10.12688/f1000research.159365.1
+> Maga AM and Fillion-Robin J-C. MorphoCloud: Democratizing Access to High-Performance Computing for Morphological Data Analysis. *F1000Research* 2026, **15**:53. https://doi.org/10.12688/f1000research.176328.1
 
 **Acknowledgment statement:**
 
