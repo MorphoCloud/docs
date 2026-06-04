@@ -8,37 +8,22 @@ You should have received invitations to join the MorphoCloud Organization and yo
 
 You will not be able to access your course repository until you accept.
 
-## Step 2: Prepare Your Student Roster Spreadsheet
+## Step 2: Fill In Your Student Roster
 
-MorphoCloud uses a Google Sheet to look up student email addresses for sending instance credentials.
+MorphoCloud uses a private Google Sheet to look up email addresses when sending instance credentials. **You no longer create or share this sheet.** When your course was approved it was generated for you automatically, already shared with the service account, and already linked to your repository — you only fill it in.
 
-1. **Make a copy** of the roster template:\
-   [roster.morphocloud.org](https://roster.morphocloud.org)
+1. **Open your roster sheet** using the link in your approval email. Sign in with the **Google account named in that email** (the one you used to fill out the intake form) — that is the account the sheet was shared with.
 
-2. Fill in the roster:
-   - **Column A (`github_handle`)** — GitHub usernames (without `@`)
-   - **Column B (`email`)** — email addresses
-   - Include yourself and any TAs in the roster first (you can enroll the students later -see below)
+2. **Add yourself first.** In the first row, enter your own **`github_handle`** (column A, no `@`) and **`email`** (column B). Do this *right away*: it lets you test the whole system immediately (Step 4) before your class roster is ready. Add any TAs now too.
 
-3. **Share the sheet read-only** with `morphocloudportal@gmail.com`\
-   (This is an automated service account — do not email this address.)
+3. **Add students** (`github_handle` + `email`) whenever your roster is finalized — you can come back and add rows at any time.
 
-4. **Copy your spreadsheet URL** — (red highlight in the screenshot) you will need it in the next step.
+No copying, sharing, or pasting a URL is required: the repository variable `MORPHOCLOUD_STUDENT_ROSTER_SHEET_ID` already points at this sheet.
 
-<img width="604" height="541" alt="image" src="https://github.com/user-attachments/assets/8a418858-dfdf-4052-b9fa-1c162ea48c54" />
-
-## Step 3: Set the Roster Sheet URL in Your Course Repository
-
-1. Go to your course repo on GitHub → **Settings → Secrets and variables → Actions → Variables**
-2. Find `MORPHOCLOUD_STUDENT_ROSTER_SHEET_ID` (it is pre-created but blank)
-3. Click the ✏️ pencil icon next to the variable
-4. Paste the full Google Sheets URL from Step 2 (MorphoCloud extracts the sheet ID automatically)
-5. Click **Save**
-
-Without this, instance credential (how to access, passwords etc.) emails cannot be sent.
+> Can't find the link, or get an "access denied" when opening the sheet? Reply to your approval email and the MorphoCloud team will re-share it.
 
 
-## Step 4: Review Course Settings (Before Creating Any Instances)
+## Step 3: Review Course Settings (Before Creating Any Instances)
 
 Your course repository has configuration variables you can adjust. **Review these before creating any instances** — changing them afterward requires running `/delete_all` and having all students recreate their instances from scratch.
 
@@ -58,9 +43,9 @@ To change: click the variable name → ✏️ pencil icon → update → **Save*
 
 If you want to change the instance flavor from what you requested at intake time (e.g., switch from `g3.large` to `g3.xl`), you can edit the `COURSE_FLAVOR` variable the same way. However, the new flavor must already be approved on your ACCESS allocation, and your Explore credits must be sufficient for the higher SU rate. **Coordinate this change with the MorphoCloud admins** at [portal@morphocloud.org](mailto:portal@morphocloud.org) before making it, so we can verify everything checks out.
 
-## Step 5: Test Your Own Instance
+## Step 4: Test Your Own Instance
 
-Before the semester starts, create your own instance to verify everything works:
+Before the semester starts, create your own instance to verify everything works. (Because you added yourself to the roster in Step 2, the credential email will be delivered to you.)
 
 1. Go to your course repository on GitHub.
 2. Open a new issue using the **Course Instance Request** template.
@@ -73,9 +58,9 @@ Before the semester starts, create your own instance to verify everything works:
    - `/email` — resend the credential email if you lose it
    - `/delete_instance` — remove the instance entirely (follow with `/create` to start fresh)
 7. Get familiar with file transfer, copy/paste, and using the TurboVNC viewer for improved visuals.
-## Step 6: Enroll Students
+## Step 5: Enroll Students
 
-Make sure each student's GitHub username and email are already in your roster spreadsheet (Step 2) before proceeding.
+Make sure each student's GitHub username and email are already in your roster sheet (Step 2) before proceeding.
 
 1. Open `Students.txt` in your course repository (it is pre-created with instructions).
 2. Add each student's GitHub username, one per line. Comment lines (starting with `#`) are ignored.
@@ -85,7 +70,7 @@ Make sure each student's GitHub username and email are already in your roster sp
 
 To add students later in the semester, simply add their usernames to `Students.txt` and push again.
 
-## Step 7: Students Request Instances
+## Step 6: Students Request Instances
 
 Once enrolled, students create their own instances by opening an issue in the course repository using the **Course Instance Request** template and posting the `/create` command. They will receive a credential email when their instance is ready.
 
