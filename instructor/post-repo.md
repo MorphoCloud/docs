@@ -10,15 +10,13 @@ You will not be able to access your course repository until you accept.
 
 ## Step 2: Fill In Your Student Roster
 
-MorphoCloud uses a private Google Sheet to look up email addresses when sending instance credentials. **You no longer create or share this sheet.** When your course was approved it was generated for you automatically, already shared with the service account, and already linked to your repository — you only fill it in.
+MorphoCloud looks up email addresses from a private Google Sheet when sending instance credentials. This sheet is created for you when your course is approved, shared with your Google account, and linked to your repository — so you just fill it in.
 
-1. **Open your roster sheet** using the link in your approval email. Sign in with the **Google account named in that email** (the one you used to fill out the intake form) — that is the account the sheet was shared with.
+1. **Open your roster sheet** using the link in your approval email. Sign in with the **Google account named in that email** (the one you signed in with on the intake form) — that is the account the sheet is shared with.
 
 2. **Add yourself first.** In the first row, enter your own **`github_handle`** (column A, no `@`) and **`email`** (column B). Do this *right away*: it lets you test the whole system immediately (Step 4) before your class roster is ready. Add any TAs now too.
 
 3. **Add students** (`github_handle` + `email`) whenever your roster is finalized — you can come back and add rows at any time.
-
-No copying, sharing, or pasting a URL is required: the repository variable `MORPHOCLOUD_STUDENT_ROSTER_SHEET_ID` already points at this sheet.
 
 > Can't find the link, or get an "access denied" when opening the sheet? Reply to your approval email and the MorphoCloud team will re-share it.
 
