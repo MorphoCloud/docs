@@ -1,4 +1,4 @@
-# MorphoCloud User Guide
+# MorphoCloud
 
 ## What is MorphoCloud?
 
@@ -6,7 +6,7 @@ MorphoCloud provides on-demand, high-performance cloud computing instances to su
 
 Instances are managed entirely through GitHub Issues. You request, control, and monitor your instance by opening an issue and posting commands as comments. To get started you'll need an [ORCID iD](https://orcid.org) (free to create), a [GitHub account](https://github.com), and you must agree to the [Usage Terms](./terms.MD).
 
-> **Important:** MorphoCloud membership grants you access to request instances, but does not guarantee that compute resources will be available at any given time. Instance availability depends on the current capacity of [JetStream2](https://jetstream-cloud.org/), a nationally shared research cloud. Before creating or unshelving an instance, we recommend always checking the [real-time resource availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) dashboard.
+> **Important:** MorphoCloud membership grants you access to request instances, but does not guarantee that compute resources will be available at any given time. Instance availability depends on the current capacity of [JetStream2](https://jetstream-cloud.org/), a nationally shared research cloud. Before creating or unshelving an instance, we recommend always checking the [real-time resource availability](https://morphocloud.org) dashboard.
 
 ---
 
@@ -25,7 +25,7 @@ For researchers and students who want a personal instance for their own work.
 4. Confirm your email by clicking the link we send you. Your GitHub organization invitation is sent automatically once your email is verified.
 5. Accept the GitHub organization invitation from your [GitHub organizations page](https://github.com/settings/organizations).
 
-> Your email is added to a low-volume MorphoCloud announcement list (outages, workflow updates, upcoming events). 
+> Your email is added to a low-volume MorphoCloud announcement list (outages, workflow updates, upcoming events).
 
 **Instance lifespan:** 60 days by default, renewable once to 120 days using `/renew`.
 
@@ -44,65 +44,34 @@ For instructors or organizers running a short workshop (5 days max) where all pa
 
 ---
 
-### 3. Use MorphoCloud For an Academic Course 
+### 3. Use MorphoCloud For an Academic Course
 
 This is for instructors who want their students to use MorphoCloud routinely as part of their course. The course is set up as a dedicated and private repository only accessible to instructor(s) and the students they invite. Repository is removed 30 days after the course concludes. Instructors can tailor the platform to better align with specific course objectives and actively maintain the course enrollment.
 
-If you are interested, please [review the instructions](./instructor/Overview.md).
+If you are interested, please [review the instructions](./instructor/README.md).
 Questions? Contact us at [portal@morphocloud.org](mailto:portal@morphocloud.org).
 
 ---
 
-## Using Your Instance
+## Using MorphoCloud
 
-Once you have accepted your GitHub organization invitation, provisioning and using your instance follows the same steps for all access types:
+Once you have access and have accepted your GitHub organization invitation, the **[User Guide](./user-guide/)** covers day-to-day use:
 
-1. Open a new issue in the [Instances repository](https://github.com/MorphoCloud/Instances/issues/new/choose):
-   - **Individual users**: use the **Instance Request** template
-2. An automatic validation check runs on your issue. Once it posts a ✅ confirmation comment, post `/create` as a comment to provision your instance.
-3. You will receive an email with the connection URL and credentials when your instance is online.
+- **[Requesting and creating your instance](./user-guide/getting-started.md)** — open an issue and run `/create`.
+- **[Connecting](./user-guide/connecting.md)** — web browser (Guacamole) or the TurboVNC client.
+- **[Transferring files](./user-guide/file-transfer.md)** — Guacamole drag-and-drop, and `scp`/`sftp`/`rsync` for bulk data.
+- **[Where your data is stored](./user-guide/data-and-storage.md)** — the MyData volume and what survives deletion.
+- **[Commands](./user-guide/commands.md)** — `/create`, `/shelve`, `/unshelve`, `/renew`, delete, and more.
+- **[Instance lifecycle](./user-guide/instance-lifecycle.md)** — running, shelving, expiration, renewal.
+- **[GPU notes & known issues](./user-guide/gpu-and-known-issues.md)** — GPU behavior on JetStream2 and resource availability.
 
-> **Workshop participants** do not open individual issues — the workshop organizer provisions instances for all participants and distributes credentials.
-
-While using MorphoCloud, an organization member can have maximum of **two** instances concurrently. This can be two personal instances, or one course and one personal instance. 
-
----
-
-## Instance Lifecycle
-
-### States
-
-| State | Meaning |
-|-------|---------|
-| **Running** | Instance is active and accessible via the connection URL |
-| **Shelved** | Instance is paused and not consuming compute resources; your data is preserved |
-| **Deleted** | Instance and/or volume have been permanently removed |
-
-### Automatic shelving
-
-For **individual and course instances**, once online the instance stays active for **4 hours**. As the session limit approaches, a reminder popup appears on the desktop — if you dismiss it or do not respond, the instance shelves itself. You can also manually extend your session at any time by clicking the session-extension icon on the desktop, which resets the 4-hour countdown. You can unshelve at any time using `/unshelve` — your data remains intact, though your running applications will be closed.
-
-**Workshop instances** stay online continuously for the duration of the workshop and are not subject to the 4-hour auto-shelving policy.
-
-### Expiration
-
-Each instance has an expiration label (e.g., `expiration:60d`) applied when it is created. When the expiration date approaches:
-
-- Individual users receive a renewal notification and can use `/renew` to extend their instance (once, up to the maximum lifespan)
-- Course and workshop instances expire on the schedule set at registration
-- After expiration the instance is shelved, then deleted after a grace period
-
-### Your data volume
-
-Your **My-Data** volume persists independently of the instance. Even if your instance is shelved or deleted, the volume remains until you explicitly delete it with `/delete_volume` or `/delete_all`.
-
-Your entire home directory — including the Desktop, Documents, and Downloads folders — is stored on the My-Data volume. Files you save anywhere in your home directory will survive a `/delete_instance` + `/create` cycle. Only a `/delete_volume` or `/delete_all` permanently removes them.
+Instructors setting up a course should follow the **[instructor guide](./instructor/README.md)**.
 
 ---
 
 ## Instance Types
 
-All instances include a persistent attached volume (your **My-Data** volume, 100 GB) mounted at `/media/volume/MyData`. Your entire home directory — Desktop, Documents, Downloads, and all other home folders — is stored on this volume, so files you save anywhere in your home directory survive instance deletion and recreation.
+All instances include a persistent attached volume (your **MyData** volume, 100 GB) mounted at `/media/volume/MyData`. Your entire home directory — Desktop, Documents, Downloads, and all other home folders — is stored on this volume, so files you save anywhere in your home directory survive instance deletion and recreation ([details](./user-guide/data-and-storage.md)).
 
 | Flavor | RAM | CPUs | GPU | Best for |
 |--------|----:|-----:|-----|----------|
@@ -115,9 +84,9 @@ All instances include a persistent attached volume (your **My-Data** volume, 100
 
 **When in doubt, start with `g3.large`.** It is the default flavor, covers the majority of SlicerMorph workflows, and is typically the most available. Move up only if you encounter memory or compute limits.
 
-> **Note on GPU instances:** Performance of 3D Slicer (especially volume rendering) degrades significantly on GPU instances when any dimension of the volume is ≥ 4096 voxels. For such large volumes, consider `m3.xl` or a large-memory flavor instead.
+> **Note on GPU instances:** Performance of 3D Slicer (especially volume rendering) degrades significantly on GPU instances when any dimension of the volume is ≥ 4096 voxels. For such large volumes, consider `m3.xl` or a large-memory flavor instead — see [GPU notes & known issues](./user-guide/gpu-and-known-issues.md).
 
-> **Check availability:** JetStream2 resources are shared nationally. Before creating or unshelving an instance, check [real-time resource availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) to avoid long waits.
+> **Check availability:** JetStream2 resources are shared nationally. Before creating or unshelving an instance, check [real-time resource availability](https://morphocloud.org) to avoid long waits.
 
 ---
 
@@ -138,66 +107,11 @@ All instances include a persistent attached volume (your **My-Data** volume, 100
 
 ---
 
-## Commands
-
-Post any of the following as a comment on your instance issue. Only one command per comment.
-
-### Individual instances
-
-| Command | What it does |
-|---------|-------------|
-| `/create` | Provision the instance and volume |
-| `/shelve` | Shelve the instance (preserves data) |
-| `/unshelve` | Resume a shelved instance |
-| `/email` | Re-send the connection URL to your email |
-| `/renew` | Extend the instance lifespan (if renewal is available) |
-| `/delete_instance` | Permanently delete the instance (volume kept) |
-| `/delete_volume` | Permanently delete the data volume (instance kept) |
-| `/delete_all` | Permanently delete both instance and volume |
-
-### Course instances
-
-Same as above **except `/renew`** — course instances expire on the fixed course schedule and cannot be renewed.
-
----
-
-## Connecting to Your Instance
-
-When your instance is ready, you will receive an email with connection credentials. Each time your instance comes back online after shelving, a new email is sent — connection addresses can change between sessions.
-
-You have two options for connecting to the graphical desktop:
-
-### Option 1 — Web browser (Guacamole)
-
-Click the **Web connect** link in the email. No software installation needed. Guacamole provides a side toolbar (`Ctrl`/`Cmd`+`Alt`+`Shift`) for clipboard access and file transfers. The desktop includes shortcuts to 3D Slicer, SlicerMorph, and your MyData storage, and a right-click menu for display/resolution settings.
-
-Limitations: font and display scaling can be imprecise; clipboard is cumbersome to use.
-
-### Option 2 — TurboVNC (recommended for visualization)
-
-Download and install [TurboVNC](https://github.com/TurboVNC/turbovnc/releases/tag/3.2.1) (expand Assets → find the package for your OS). Use the **VNC address** and passphrase from the credentials email to connect.
-
-Benefits: much better image quality, proper display scaling, and native copy/paste. Limitation: no file transfer (use Guacamole for that).
-
-**Best practice:** use both in tandem — Guacamole for file transfers, TurboVNC for interactive 3D visualization.
-
-> **Important:** Always save your work inside your home directory (Desktop, Documents, Downloads, or anywhere under `~`). Your home directory lives on the My-Data volume and persists across instance deletions and recreations. Only a `/delete_volume` or `/delete_all` permanently removes your files.
-
----
-
-## Important Notes
-
-1. **Opening an issue does not provision an instance.** After you open an instance request issue, an automatic validation runs first. Once it posts a ✅ confirmation comment on your issue, you must then post `/create` to actually provision the instance.
-2. **Changing instance types requires admin assistance.** If you need a different flavor after your issue has been created, post a comment on your issue tagging `@MorphoCloud/morphocloud-admins` and explain what you need. An admin will delete your current instance (your data volume is untouched), update the instance type label, and you can then use `/create` to provision the new flavor.
-3. **Resource availability varies.** JetStream2 is a shared national resource. If `/create` or `/unshelve` hangs, check [availability](https://docs.jetstream-cloud.org/overview/status/#availability-of-scarce-resources) and try again later. Particularly for courses we cannot guarantee there will be instances available for everyone at the meeting time of the course. As such MorphoCloud is best used as an asynchronous learning tool in classroom. 
-4. **Your home directory is persistent.** Desktop, Documents, Downloads, and all other folders under your home directory live on the My-Data volume and survive instance deletion and recreation. Only `/delete_volume` or `/delete_all` permanently removes them. Files written outside your home directory (e.g., to `/tmp` or the root disk) are not persistent.
-
----
-
 ## Getting Help
-For general inquiries send us an email at **portal@morphocloud.org**
 
-For instance support, tag `@MorphoCloud/morphocloud-admins` in your specific issues page and explain what you need help with. 
+For general inquiries send us an email at **portal@morphocloud.org**.
+
+For instance support, tag `@MorphoCloud/morphocloud-admins` in your specific issue page and explain what you need help with.
 
 ---
 

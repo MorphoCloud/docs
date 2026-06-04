@@ -1,0 +1,27 @@
+# MorphoCloud User Guide
+
+Already have a MorphoCloud instance? This guide covers day-to-day use. New here, or
+want to know what MorphoCloud is and how to get access? Start with the
+[overview](../README.md).
+
+## Getting started
+- [Requesting and creating your instance](getting-started.md) — open an issue, run `/create`, get your credentials.
+
+## Using your instance
+- [Connecting](connecting.md) — web browser (Guacamole) vs. the TurboVNC client.
+- [Transferring files](file-transfer.md) — Guacamole drag-and-drop, and `scp`/`sftp`/`rsync` for bulk data.
+- [Where your data is stored](data-and-storage.md) — 100 GB persistent user storage.
+
+## Managing your instance
+- [Commands](commands.md) — `/create`, `/shelve`, `/unshelve`, `/renew`, delete, and more.
+- [Instance lifecycle](instance-lifecycle.md) — running, shelving, expiration, renewal.
+
+## Reference
+- [GPU notes & resource availability](gpu-and-known-issues.md) — GPU instances on JetStream2 and checking availability.
+
+## Known issues
+- [Large-volume rendering on GPU instances](gpu-and-known-issues.md#known-issues) — 3D Slicer stalls when volume-rendering a volume that is ≥ 4096 voxels on any axis.
+
+## Need help?
+Email [portal@morphocloud.org](mailto:portal@morphocloud.org), or tag
+`@MorphoCloud/morphocloud-admins` in a comment on your instance issue.
