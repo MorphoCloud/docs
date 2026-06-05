@@ -36,7 +36,7 @@ For researchers and students who want a personal instance for their own work.
 For instructors or organizers running a short workshop (5 days max) where all participants need simultaneous access.
 
 **How to get access:**
-1. The workshop organizer registers at [join.morphocloud.org/workshop](https://join.morphocloud.org/workshop) and signs in with their [ORCID iD](https://orcid.org). Once verified, they are added to the **WorkshopOrganizers** GitHub team.
+1. The workshop organizer registers at [workshop.morphocloud.org](https://workshop.morphocloud.org) and signs in with their [ORCID iD](https://orcid.org). Once verified, they are added to the **WorkshopOrganizers** GitHub team.
 2. The organizer opens a **Workshop Request** issue in the [MorphoCloud Instances repository](https://github.com/MorphoCloud/Instances/issues/new/choose) and fills in the workshop details (dates, number of participants, instance flavor).
 3. Once the MorphoCloud team approves the request, instances are provisioned for each participant — the organizer receives all connection credentials by email and is responsible for distributing them to participants.
 
