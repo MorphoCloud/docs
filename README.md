@@ -75,14 +75,14 @@ All instances include a persistent attached volume (your **MyData** volume, 100 
 
 | Flavor | RAM | CPUs | GPU | Best for |
 |--------|----:|-----:|-----|----------|
-| `g3.large` | 60 GB | 16 | A100 (½, 20 GB) | General-purpose morphology and morphometrics, 3D Slicer, most SlicerMorph workflows |
-| `g3.xl` | 120 GB | 32 | A100 (full, 40 GB) | Heavier GPU workloads needing a full A100 |
-| `g4.xl` | 120 GB | 12 | L40S (48 GB) | Photogrammetry, NNInteractive, AI-assisted segmentation, large GPU workloads |
+| `g3.large` | 60 GB | 16 | A100 (½, 20 GB) | **Default.** Most 3D Slicer / SlicerMorph workflows — best availability |
+| `g4.xl` | 120 GB | 12 | L40S (48 GB) | When you need **more GPU memory or RAM** than g3.large (fewer vCPUs, slower than a full A100) |
+| `g3.xl` | 120 GB | 32 | A100 (full, 40 GB) | **Heaviest / fastest GPU work** — full A100, ~2× g4.xl |
 | `m3.xl` | 125 GB | 32 | — | Computationally intensive tasks that don't require a GPU (e.g., image registration with ANTsPy) |
 | `r3.large` | 500 GB | 64 | — | Image registration with large datasets |
 | `r3.xl` | 1000 GB | 128 | — | Image registration with very large datasets |
 
-**When in doubt, start with `g3.large`.** It is the default flavor, covers the majority of SlicerMorph workflows, and is typically the most available. Move up only if you encounter memory or compute limits.
+**When in doubt, start with `g3.large`.** It is the default flavor, covers the majority of SlicerMorph workflows, and is typically the most available. Move up only if you encounter memory or compute limits — see [GPU notes & known issues](./user-guide/gpu-and-known-issues.md) for which flavor to pick.
 
 > **Note on GPU instances:** Performance of 3D Slicer (especially volume rendering) degrades significantly on GPU instances when any dimension of the volume is ≥ 4096 voxels. For such large volumes, consider `m3.xl` or a large-memory flavor instead — see [GPU notes & known issues](./user-guide/gpu-and-known-issues.md).
 
