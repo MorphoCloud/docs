@@ -6,11 +6,30 @@ right instance and avoid surprises.
 
 ## GPU instance types
 
-| Flavor | GPU | Notes |
-|--------|-----|-------|
-| `g3.large` | A100, **½ card (20 GB)** | Default. Covers most 3D Slicer / SlicerMorph workflows. |
-| `g3.xl` | A100, **full card (40 GB)** | Heavier GPU workloads needing more GPU memory. |
-| `g4.xl` | L40S (48 GB) | Photogrammetry, NNInteractive, AI-assisted segmentation, large GPU workloads. |
+GPU flavors differ in **GPU memory**, **GPU speed**, **vCPUs**, and **availability** —
+bigger GPU memory does not mean faster. They're listed below in the order you should
+escalate through them:
+
+| Flavor | GPU | vCPU | RAM | When to use |
+|--------|-----|-----:|----:|-------------|
+| `g3.large` *(default)* | ½ A100 — 20 GB | 16 | 60 GB | **Almost everything.** Best availability, so it's quickest to get and unshelve — start here. |
+| `g4.xl` | L40S — 48 GB | 12 | 120 GB | When g3.large runs short on **GPU memory (>20 GB)** or **system RAM (>60 GB)**. More memory than g3.large, but **fewer vCPUs** and a GPU that is **not as fast as a full A100**. |
+| `g3.xl` | full A100 — 40 GB | 32 | 120 GB | **Heaviest GPU workloads.** A full A100 is roughly **2× faster than g4.xl** and has **2× its vCPUs**. Pick it when raw GPU speed matters most. |
+
+### Which one should I pick?
+
+1. **Start with `g3.large`** (the default). It handles almost all 3D Slicer / SlicerMorph
+   work and has the most JetStream2 availability, so you'll get an instance fastest.
+2. **Step up to `g4.xl` only if you hit a wall** on g3.large — i.e. you need **more GPU
+   memory** or **more system RAM**. Its L40S has the most GPU memory (48 GB), but it has
+   the **fewest vCPUs (12)** and is **not** as fast as a full A100, so choose it for
+   *capacity*, not speed.
+3. **Use `g3.xl` for the heaviest / fastest GPU work** — a full 40 GB A100 with 32 vCPUs,
+   about **twice as fast as g4.xl** across the board. Availability is lower than
+   g3.large, so reserve it for jobs that truly need the speed.
+
+> **Rule of thumb:** need more GPU *memory* → `g4.xl`; need more GPU *speed* → `g3.xl`;
+> everything else → `g3.large`.
 
 Non-GPU flavors (`m3.xl`, `r3.large`, `r3.xl`) trade the GPU for large RAM/CPU and
 are the right choice for the large-volume case below. See the full flavor table in
