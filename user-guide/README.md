@@ -17,10 +17,11 @@ want to know what MorphoCloud is and how to get access? Start with the
 - [Instance lifecycle](instance-lifecycle.md) — running, shelving, expiration, renewal.
 
 ## Reference
-- [GPU notes & resource availability](gpu-and-known-issues.md) — GPU instances on JetStream2 and checking availability.
+- [Choosing & changing a GPU flavor](gpu-and-known-issues.md) — pick the right GPU instance, and switch flavor without losing your data.
 
 ## Known issues
-- [Large-volume rendering on GPU instances](gpu-and-known-issues.md#known-issues) — 3D Slicer stalls when volume-rendering a volume that is ≥ 4096 voxels on any axis.
+- [Large-volume rendering on GPU instances](gpu-and-known-issues.md#large-volume-rendering-stalls-gpu-instances--4096-voxels) — 3D Slicer stalls when volume-rendering a volume ≥ 4096 voxels on any axis.
+- [Availability can block creating or unshelving](gpu-and-known-issues.md#availability-can-block-creating-or-unshelving) — JetStream2 is shared, so scarce flavors (especially g3.xl) can fail to start.
 
 ## Need help?
 Email [portal@morphocloud.org](mailto:portal@morphocloud.org), or tag
