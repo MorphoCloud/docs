@@ -18,6 +18,10 @@ MorphoCloud looks up email addresses from a private Google Sheet when sending in
 
 3. **Add students** (`github_handle` + `email`) whenever your roster is finalized — you can come back and add rows at any time.
 
+> Keep the header row exactly as-is — `github_handle` in column A, `email` in column B. Don't rename, move, or delete it, or MorphoCloud can't email your students their instance details.
+
+The roster only supplies email addresses — by itself it does **not** give students access. That happens in Step 5. Enrolling a student is **two parts: this roster *and* `Students.txt` (Step 5) — you must do both.**
+
 > Can't find the link, or get an "access denied" when opening the sheet? Reply to your approval email and the MorphoCloud team will re-share it.
 
 
@@ -57,6 +61,8 @@ Before the semester starts, create your own instance to verify everything works.
    - `/delete_instance` — remove the instance entirely (follow with `/create` to start fresh)
 7. Get familiar with file transfer, copy/paste, and using the TurboVNC viewer for improved visuals.
 ## Step 5: Enroll Students
+
+This is the step that actually **invites** your students to GitHub. Filling the roster (Step 2) alone invites no one — if you skip this, your students never get access.
 
 Make sure each student's GitHub username and email are already in your roster sheet (Step 2) before proceeding.
 
