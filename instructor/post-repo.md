@@ -60,19 +60,19 @@ Before the semester starts, create your own instance to verify everything works.
    - `/email` — resend the credential email if you lose it
    - `/delete_instance` — remove the instance entirely (follow with `/create` to start fresh)
 7. Get familiar with file transfer, copy/paste, and using the TurboVNC viewer for improved visuals.
-## Step 5: Enroll Students
+## Step 5: Enroll Course Users
 
-This is the step that actually **invites** your students to GitHub. Filling the roster (Step 2) alone invites no one — if you skip this, your students never get access.
+This is the step that actually **invites** people to GitHub. Filling the roster (Step 2) alone invites no one — if you skip this, no one gets access.
 
-Make sure each student's GitHub username and email are already in your roster sheet (Step 2) before proceeding.
+Make sure everyone's GitHub username and email are already in your roster sheet (Step 2) before proceeding.
 
 1. Open `roster-handles.txt` in your course repository (it is pre-created with instructions).
-2. Add each student's GitHub username, one per line. Comment lines (starting with `#`) are ignored.
-3. Commit and push — a GitHub Action runs automatically to invite students to the MorphoCloud Organization and your course team.
+2. Add the GitHub username of **everyone who will be using the course repo** — students, TAs, co-instructors, and anyone else you deem relevant — one per line. Comment lines (starting with `#`) are ignored.
+3. Commit and push — a GitHub Action runs automatically to invite everyone listed to the MorphoCloud Organization and your course team.
 
 > **Important:** Students must accept the GitHub invitation within **7 days** or it will expire. To accept, students go to their GitHub notifications or to **GitHub → Your Organizations** and click Accept.
 
-To add students later in the semester, simply add their usernames to `roster-handles.txt` and push again.
+To add people later in the semester, simply add their usernames to `roster-handles.txt` and push again.
 
 ## Step 6: Students Request Instances
 

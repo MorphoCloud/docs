@@ -24,7 +24,7 @@ MorphoCloud provides on-demand, GPU-accelerated virtual desktops for courses tha
 See the [post-repo setup guide](post-repo.md) for detailed steps. In summary:
 
 1. Collect your students' GitHub usernames and their corresponding email addresses. Enter them into your course roster sheet (created and shared with you when your course is approved — see the [post-repo setup guide](post-repo.md)).
-2. Edit `roster-handles.txt` in your course repository and add each student's GitHub username (one per line). This will automatically invite them to your course repository and the MorphoCloud Organization.
+2. Edit `roster-handles.txt` in your course repository and add the GitHub username of everyone who will be using the course repo — students, TAs, co-instructors (one per line). This will automatically invite them to your course repository and the MorphoCloud Organization.
 3. Show students how to accept the GitHub invitation to join the MorphoCloud Organization and the course repository.
 4. Walk them through how to create and access their instances (e.g., file transfer, copy/paste, TurboVNC viewer for better visuals).
 
