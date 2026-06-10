@@ -20,7 +20,7 @@ cumbersome to use.
 
 ## Option 2 — TurboVNC (recommended for visualization)
 
-Download and install [TurboVNC](https://github.com/TurboVNC/turbovnc/releases/tag/3.2.1)
+Download and install [TurboVNC](https://github.com/TurboVNC/turbovnc/releases)
 (expand **Assets** and pick the package for your OS). Connect using the **VNC
 address** and passphrase from the credentials email. The passphrase is the same one
 used for the web (Guacamole) connection.
