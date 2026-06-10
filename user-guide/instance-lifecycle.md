@@ -20,6 +20,11 @@ applications are closed.
 **Workshop instances** stay online continuously for the duration of the workshop
 and are not subject to the 4-hour auto-shelving policy.
 
+**Closing your request issue** does not delete anything: if your instance is
+running it is shelved (data and volume preserved), and a comment explains how
+to continue. Reopen the issue and comment `/unshelve` to resume, or comment
+`/delete_all` to release the instance and volume permanently.
+
 ## Expiration
 
 Each instance has an expiration label (e.g. `expiration:60d`) applied when it is
