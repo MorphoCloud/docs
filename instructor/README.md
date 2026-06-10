@@ -24,14 +24,14 @@ MorphoCloud provides on-demand, GPU-accelerated virtual desktops for courses tha
 See the [post-repo setup guide](post-repo.md) for detailed steps. In summary:
 
 1. Collect your students' GitHub usernames and their corresponding email addresses. Enter them into your course roster sheet (created and shared with you when your course is approved — see the [post-repo setup guide](post-repo.md)).
-2. Edit `Students.txt` in your course repository and add each student's GitHub username (one per line). This will automatically invite them to your course repository and the MorphoCloud Organization.
+2. Edit `roster-handles.txt` in your course repository and add each student's GitHub username (one per line). This will automatically invite them to your course repository and the MorphoCloud Organization.
 3. Show students how to accept the GitHub invitation to join the MorphoCloud Organization and the course repository.
 4. Walk them through how to create and access their instances (e.g., file transfer, copy/paste, TurboVNC viewer for better visuals).
 
 ## Maintaining Enrollment
 
-- **Adding students:** If a student joins your course late, add their GitHub username and email to the roster sheet, then add their username to `Students.txt`. The invitation is sent automatically — they just need to accept it to start using the platform.
-- **Removing students:** If a student drops the course, you need to remove their GitHub username from the course team list, which is independent of the Students.txt in your repo. Removing them from Students.txt will not be enough. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions on how to do this.
+- **Adding students:** If a student joins your course late, add their GitHub username and email to the roster sheet, then add their username to `roster-handles.txt`. The invitation is sent automatically — they just need to accept it to start using the platform.
+- **Removing students:** If a student drops the course, you need to remove their GitHub username from the course team list, which is independent of the `roster-handles.txt` in your repo. Removing them from `roster-handles.txt` will not be enough. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions on how to do this.
 - **Checking usage:** MorphoCloud provides tools to check which students on your roster have already onboarded (i.e., accepted invitation and joined the course repo). Ask MorphoCloud admins how to access and use it.
 
 ## Need Help?

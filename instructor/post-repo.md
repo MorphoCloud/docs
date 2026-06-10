@@ -8,19 +8,19 @@ You should have received invitations to join the MorphoCloud Organization and yo
 
 You will not be able to access your course repository until you accept.
 
-## Step 2: Fill In Your Student Roster
+## Step 2: Fill In Your Course Roster
 
 MorphoCloud looks up email addresses from a private Google Sheet when sending instance credentials. This sheet is created for you when your course is approved, shared with your Google account, and linked to your repository — so you just fill it in.
 
 1. **Open your roster sheet** using the link in your approval email. Sign in with the **Google account named in that email** (the one you signed in with on the intake form) — that is the account the sheet is shared with.
 
-2. **Add yourself first.** In the first row, enter your own **`github_handle`** (column A, no `@`) and **`email`** (column B). Do this *right away*: it lets you test the whole system immediately (Step 4) before your class roster is ready. Add any TAs now too.
+2. **Add yourself first.** In **row 2** (the first entry, directly under the header), enter your own **`github_handle`** (column A, no `@`) and **`email`** (column B) — this also ensures you receive instance emails yourself. Do this *right away*: it lets you test the whole system immediately (Step 4) before your class roster is ready. Add any TAs now too.
 
 3. **Add students** (`github_handle` + `email`) whenever your roster is finalized — you can come back and add rows at any time.
 
 > Keep the header row exactly as-is — `github_handle` in column A, `email` in column B. Don't rename, move, or delete it, or MorphoCloud can't email your students their instance details.
 
-The roster only supplies email addresses — by itself it does **not** give students access. That happens in Step 5. Enrolling a student is **two parts: this roster *and* `Students.txt` (Step 5) — you must do both.**
+The roster only supplies email addresses — by itself it does **not** give students access. That happens in Step 5. Enrolling a student is **two parts: this roster *and* `roster-handles.txt` (Step 5) — you must do both.**
 
 > Can't find the link, or get an "access denied" when opening the sheet? Reply to your approval email and the MorphoCloud team will re-share it.
 
@@ -66,13 +66,13 @@ This is the step that actually **invites** your students to GitHub. Filling the 
 
 Make sure each student's GitHub username and email are already in your roster sheet (Step 2) before proceeding.
 
-1. Open `Students.txt` in your course repository (it is pre-created with instructions).
+1. Open `roster-handles.txt` in your course repository (it is pre-created with instructions).
 2. Add each student's GitHub username, one per line. Comment lines (starting with `#`) are ignored.
 3. Commit and push — a GitHub Action runs automatically to invite students to the MorphoCloud Organization and your course team.
 
 > **Important:** Students must accept the GitHub invitation within **7 days** or it will expire. To accept, students go to their GitHub notifications or to **GitHub → Your Organizations** and click Accept.
 
-To add students later in the semester, simply add their usernames to `Students.txt` and push again.
+To add students later in the semester, simply add their usernames to `roster-handles.txt` and push again.
 
 ## Step 6: Students Request Instances
 
@@ -94,7 +94,7 @@ More information on connecting to instances: [MorphoCloud docs](https://github.c
 
 ## Maintaining Enrollment
 
-- **Adding students:** Add their GitHub username and email to the roster sheet, then add their username to `Students.txt` and push. The invitation is sent automatically.
+- **Adding students:** Add their GitHub username and email to the roster sheet, then add their username to `roster-handles.txt` and push. The invitation is sent automatically.
 - **Removing students:** Remove their GitHub username from the team list. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions.
 
 ## Important for courses with more than 9 students: 
