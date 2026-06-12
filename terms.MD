@@ -6,7 +6,13 @@ By accessing or using the MorphoCloud platform (“the Service”), you agree to
 
 ---
 
-## 1. Compliance with Jetstream2 (JS2) & ACCESS Policies
+## 1. Account Identity and Ownership
+
+By registering, you affirm that the ORCID iD and the GitHub account you provide both belong to you personally and identify the same individual — you. Accounts must not be shared: you may not register credentials belonging to another person, and you may not allow others to access MorphoCloud through your accounts or the instances provisioned under them. Each individual who uses MorphoCloud must complete their own registration. Misrepresenting account ownership or sharing access may result in removal from the service and deletion of associated instances and data.
+
+---
+
+## 2. Compliance with Jetstream2 (JS2) & ACCESS Policies
 
 MorphoCloud is hosted on the Jetstream2 (JS2) infrastructure, funded by the National Science Foundation (NSF). Use of the Service is strictly subject to the Jetstream2 Acceptable Use Policy and ACCESS (Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support) regulations.
 
@@ -17,7 +23,7 @@ MorphoCloud is hosted on the Jetstream2 (JS2) infrastructure, funded by the Nati
 
 ---
 
-## 2. Prohibition of Human Subject Research (HSR)
+## 3. Prohibition of Human Subject Research (HSR)
 
 MorphoCloud does not provide the security controls necessary for Human Subject Research.
 
@@ -26,7 +32,7 @@ MorphoCloud does not provide the security controls necessary for Human Subject R
 
 ---
 
-## 3. Data Responsibility and "No Backup" Policy
+## 4. Data Responsibility and "No Backup" Policy
 
 * **No Recovery Services:** MorphoCloud does not provide data backup, mirroring, or recovery services.
 * **Risk of Loss:** All data stored on the Service is at risk of loss due to hardware failure, software error, or administrative action.
@@ -35,7 +41,7 @@ MorphoCloud does not provide the security controls necessary for Human Subject R
 
 ---
 
-## 4. Prohibited Activities
+## 5. Prohibited Activities
 
 Users are strictly prohibited from:
 * Sharing account credentials or providing access to unauthorized third parties.
@@ -44,7 +50,7 @@ Users are strictly prohibited from:
 
 ---
 
-## 5. Acknowledgment of Support
+## 6. Acknowledgment of Support
 
 If you use MorphoCloud for your project, you are required to cite our paper and acknowledge the MorphoCloud project and our funders in any product (presentations, papers, project proposals, etc.) that results from this work.
 
@@ -58,6 +64,6 @@ And acknowledge our funders with the following statement:
 
 ---
 
-## 6. Disclaimer and Limitation of Liability 
+## 7. Disclaimer and Limitation of Liability 
 
 THE SERVICE IS PROVIDED "AS IS." THE MORPHOCLOUD TEAM, INDIANA UNIVERSITY, AND THE JETSTREAM2 TEAM EXPRESSLY DISCLAIM ALL WARRANTIES. WE SHALL NOT BE LIABLE FOR ANY LOSS OF DATA, LOSS OF RESEARCH PROGRESS, OR ANY DIRECT OR INDIRECT DAMAGES ARISING FROM THE USE OF THE SERVICE.
