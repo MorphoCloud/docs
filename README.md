@@ -94,7 +94,7 @@ All instances include a persistent attached volume (your **MyData** volume, 100 
 
 | Software | Details |
 |----------|---------|
-| 3D Slicer | v5.10 |
+| 3D Slicer | v5.12.3 |
 | SlicerMorph | ImageStacks, GPA, ALPACA, and other morphometrics tools |
 | DeCA | Morphometrics via dense correspondence analysis |
 | Photogrammetry | Generate textured 3D models from photographs |
