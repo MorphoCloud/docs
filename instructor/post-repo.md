@@ -8,11 +8,19 @@ You should have received invitations to join the MorphoCloud Organization and yo
 
 You will not be able to access your course repository until you accept.
 
+### Then wait for the second email
+
+Accepting your invitations is all you can do for now. The MorphoCloud team still has to finish setting up your compute allocation and your course runner.
+
+When that is done you will receive a second email, **"Your MorphoCloud course is ready"**. It contains your roster sheet link and your enrollment instructions.
+
+> **Every step below needs that second email.** Please don't create any instances before it arrives — the machinery that builds them isn't running yet.
+
 ## Step 2: Fill In Your Course Roster
 
-MorphoCloud looks up email addresses from a private Google Sheet when sending instance credentials. This sheet is created for you when your course is approved, shared with your Google account, and linked to your repository — so you just fill it in.
+MorphoCloud looks up email addresses from a private Google Sheet when sending instance credentials. The sheet is created for you and shared with you automatically — you just fill it in.
 
-1. **Open your roster sheet** using the link in your approval email. Sign in with the **Google account named in that email** (the one you signed in with on the intake form) — that is the account the sheet is shared with.
+1. **Open your roster sheet** using the link in your **"Your MorphoCloud course is ready"** email. Sign in with the **Google account named in that email** (the one you signed in with on the intake form) — that is the account the sheet is shared with.
 
 2. **Add yourself first.** In **row 2** (the first entry, directly under the header), enter your own **`github_handle`** (column A, no `@`) and **`email`** (column B) — this also ensures you receive instance emails yourself. Do this *right away*: it lets you test the whole system immediately (Step 4) before your class roster is ready. Add any TAs now too.
 
@@ -22,7 +30,7 @@ MorphoCloud looks up email addresses from a private Google Sheet when sending in
 
 The roster only supplies email addresses — by itself it does **not** give students access. That happens in Step 5. Enrolling a student is **two parts: this roster *and* `roster-handles.txt` (Step 5) — you must do both.**
 
-> Can't find the link, or get an "access denied" when opening the sheet? Reply to your approval email and the MorphoCloud team will re-share it.
+> Can't find the link, or get an "access denied" when opening the sheet? Reply to your **"Your MorphoCloud course is ready"** email, or write to [portal@morphocloud.org](mailto:portal@morphocloud.org), and the MorphoCloud team will re-share it.
 
 
 ## Step 3: Review Course Settings (Before Creating Any Instances)
