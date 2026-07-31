@@ -12,7 +12,7 @@ You will not be able to access your course repository until you accept.
 
 Accepting your invitations is all you can do for now. The MorphoCloud team still has to finish setting up your compute allocation and your course runner.
 
-When that is done you will receive a second email, **"Your MorphoCloud course is ready"**. It contains your roster sheet link and your enrollment instructions.
+When that is done you will receive a second email — subject **"Your MorphoCloud course is ready"**, followed by your course name. It contains your roster sheet link and your enrollment instructions.
 
 > **Every step below needs that second email.** Please don't create any instances before it arrives — the machinery that builds them isn't running yet.
 
