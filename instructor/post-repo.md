@@ -35,9 +35,9 @@ Go to your course repo → **Settings → Secrets and variables → Actions → 
 |---|---|---|
 | `VOLUME_SIZE_GB` | `100` | Storage volume size per student (in GB). If your course uses large datasets, increase this. Make sure your allocation has enough storage for all students (e.g., 35 students × 200 GB = 7 TB). By default, MorphoCloud admins exchange 10,000 SU for 10 TB of JS2 storage. If you need more, request an additional storage exchange on your ACCESS allocation. |
 | `INSTANCE_SHELVING_TIMEOUT_HRS` | `4` | Hours before an idle instance is automatically shelved. Increase if your labs regularly exceed 4 hours. Students can extend their session by 4 hours using the in-browser popup that appears 30 minutes before shelving. |
-| `MORPHOCLOUD_MAX_TOTAL_INSTANCES` | `NN` | This is set to the expected number of users when you submit to your course application. If your enrollment grew beyond your initial submission, you can change the number here. This total should always be inclusive of both students and instructors using the platform. |
+| `MORPHOCLOUD_MAX_TOTAL_INSTANCES` | enrollment + 1 | A cap on how many instances your allocation runs at once. It comes from the enrollment you gave on the intake form, plus one slot for the small server that runs your course's automation — that server counts as an instance in your allocation. If your enrollment grew, set this to **total participants (students *and* instructors) + 1**. |
 
-To change: click the variable name → ✏️ pencil icon → update → **Save**. Changes take effect within 5 minutes.
+To change: click the variable name → ✏️ pencil icon → update → **Save**. The new value applies to the next `/create`.
 
 > **These settings are optional** — the defaults work well for most courses. But if you need to change them, do so before anyone runs `/create`.
 
@@ -98,7 +98,7 @@ More information on connecting to instances: [MorphoCloud docs](https://github.c
 - **Removing students:** Remove their GitHub username from the team list. Contact the MorphoCloud admins at [portal@morphocloud.org](mailto:portal@morphocloud.org) for instructions.
 
 ## Important for courses with more than 9 students: 
-When a new allocation is created on JetStream2, there is a default hard quota of 25 instances and 10 volumes per allocation.  This needs to be increased for the infrastructure to function correctly. The new quotas you will need should be **total number of people in the course (inclusive of instructors) + 2** (one reserved for the MorphoCloud server, one as buffer). E.g., if your total enrollment is 30, ask for your quota to be increased to 32 **for both instances and volumes**.  
+When a new allocation is created on JetStream2, there is a default hard quota of 25 instances and 10 volumes per allocation.  This needs to be increased for the infrastructure to function correctly. The new quotas you will need should be **total number of people in the course (inclusive of instructors) + 2** (one reserved for the MorphoCloud server — the same automation server counted in `MORPHOCLOUD_MAX_TOTAL_INSTANCES` above — and one as buffer). E.g., if your total enrollment is 30, ask for your quota to be increased to 32 **for both instances and volumes**.  
 
 You need to [open a support ticket with the ACCESS team](https://support.access-ci.org/help-ticket), and request to increase the instance and volume quota to the enrollment + 2 of your course. Here is boilerplate you can use for your request:
 
