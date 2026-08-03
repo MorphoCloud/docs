@@ -10,15 +10,16 @@
 
 ## Automatic shelving
 
-For **individual and course instances**, once online the instance stays active for
-**4 hours**. As the limit approaches, a reminder popup appears on the desktop — if
-you dismiss it or don't respond, the instance shelves itself. You can extend at any
-time by clicking the session-extension icon on the desktop, which resets the 4-hour
-countdown. Resume any time with `/unshelve` — your data is intact, though running
-applications are closed.
+For **individual and course instances**, once online the instance stays active for a
+set number of hours — **4 by default**, and larger flavors are shorter. Course
+instructors can set a different limit for their own course. A reminder popup appears
+on the desktop 30 minutes before the limit; if you dismiss it or don't respond, the
+instance shelves itself. You can extend at any time by clicking the
+session-extension icon on the desktop, which restarts the full countdown. Resume any
+time with `/unshelve` — your data is intact, though running applications are closed.
 
-**Workshop instances** stay online continuously for the duration of the workshop
-and are not subject to the 4-hour auto-shelving policy.
+**Workshop instances** stay online for the duration of the workshop and are not
+subject to this auto-shelving policy.
 
 **Closing your request issue** does not delete anything: if your instance is
 running it is shelved (data and volume preserved), and a comment explains how
@@ -32,8 +33,9 @@ created. As the date approaches:
 
 - **Individual** users receive a renewal notification and can use `/renew` to extend
   the instance — once, up to the maximum lifespan.
-- **Course** instances expire **120 days after the request issue was opened**,
-  independently of your course end date, and cannot be renewed.
+- **Course** instances expire a fixed number of days after the request issue was
+  opened — **120 by default** — independently of your course end date, and cannot
+  be renewed.
 - **Workshop** instances expire on the workshop schedule and cannot be renewed.
 - At expiration the instance **and its MyData volume are both deleted immediately** —
   there is no grace period and no shelved intermediate state. Save anything you need

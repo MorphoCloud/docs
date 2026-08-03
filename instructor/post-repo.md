@@ -101,7 +101,7 @@ Students manage their instances by posting commands as issue comments:
 | `/email` | Resend the credential email |
 | `/delete_instance` | Remove a stuck instance — must be followed by `/create` to start fresh |
 
-> **One command at a time.** Each command reacts 🚀 when it starts and 👍 when it finishes. Wait for the 👍 before sending the next one. Commands sent back to back displace each other and the earlier one will not run — when that happens the issue gets a **Command Dropped ⚠️** comment naming the command to send again.
+> **One command at a time.** Each command reacts 🚀 when it starts and 👍 when it finishes. One command runs while a second may wait — send a third before those finish and the waiting one is cancelled without running. Wait for the 👍 before sending the next. When a command is dropped the issue gets a **Command Dropped ⚠️** comment naming the one to send again.
 
 Students can ask for help by mentioning you (`@<your-github-handle>`) or `@MorphoCloud/morphocloud-admins` in an issue comment.
 
