@@ -32,9 +32,12 @@ created. As the date approaches:
 
 - **Individual** users receive a renewal notification and can use `/renew` to extend
   the instance — once, up to the maximum lifespan.
-- **Course and workshop** instances expire on the schedule set at registration and
-  cannot be renewed.
-- After expiration the instance is shelved, then deleted after a grace period.
+- **Course** instances expire **120 days after the request issue was opened**,
+  independently of your course end date, and cannot be renewed.
+- **Workshop** instances expire on the workshop schedule and cannot be renewed.
+- At expiration the instance **and its MyData volume are both deleted immediately** —
+  there is no grace period and no shelved intermediate state. Save anything you need
+  off the instance before then.
 
 > Availability on JetStream2 varies — check
 > [real-time availability](https://morphocloud.org)
