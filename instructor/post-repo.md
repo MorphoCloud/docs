@@ -112,6 +112,16 @@ You need to [open a support ticket with the ACCESS team](https://support.access-
 
 `We use JetStream2 and MorphoCloud for the XYZ course and request that both the instance and volume quotas on allocation BIO-XXXXXX be increased to YY to support all enrolled students. Each instance requires its corresponding volume storage, so both quotas must be increased simultaneously.`
 
+### CPU and memory quotas
+
+A new allocation also comes with default quotas of **214 CPUs and 835 GB of memory**. Unlike instances and volumes, these do not need to scale with your enrollment — they only need to cover the instances running **at the same time**. Every student keeps a volume whether or not their instance is running, but MorphoCloud automatically shelves idle instances, which releases their CPUs and memory back to the allocation while preserving the student's data.
+
+On the standard `g3.large` instance (16 CPUs, 60 GB memory each), the defaults support **13 active instances at the same time**. For most courses this is sufficient even with larger enrollments, since students rarely all work at once. You only need to request more if you expect more than 13 instances running at the same time — for example, during a scheduled in-class lab session.
+
+If you do, add this to the same ACCESS ticket:
+
+`Additionally, please increase the CPU and memory quotas on allocation BIO-XXXXXX to support NN simultaneous g3.large instances (16 CPUs and 60 GB memory each).`
+
 ## Need Help?
 
 Contact the MorphoCloud team at [portal@morphocloud.org](mailto:portal@morphocloud.org).
