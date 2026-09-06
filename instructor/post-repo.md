@@ -4,9 +4,14 @@ Once the MorphoCloud team approves your intake form, you will receive an email w
 
 ## Step 1: Accept Your GitHub Invitations
 
-You should have received invitations to join the MorphoCloud Organization and your course repository. Go to your GitHub profile icon → **Your Organizations** and accept the pending invitations. (These instructions are also in the email sent by the MorphoCloud team.)
+You have **two separate invitations, and you need both**:
 
-You will not be able to access your course repository until you accept.
+1. **The MorphoCloud organization invitation.**
+2. **The course repository invitation** — listed as `MC-<course-id>`, and it **expires after 7 days**.
+
+Both appear at [github.com/settings/organizations](https://github.com/settings/organizations) (your GitHub profile icon → **Your Organizations**), and both are linked from your approval email. Accept them both.
+
+**Accepting only the organization invitation is not enough.** It leaves you with read-only access: you can open the repository, but editing a file offers only _"You must be able to fork a repository to propose changes"_. If you see that message, the repository invitation is still sitting there unaccepted.
 
 ### Then wait for the second email
 
@@ -42,7 +47,7 @@ Go to your course repo → **Settings → Secrets and variables → Actions → 
 | Variable | Default | Description |
 |---|---|---|
 | `VOLUME_SIZE_GB` | `100` | Storage volume size per student (in GB). If your course uses large datasets, increase this. Make sure your allocation has enough storage for all students (e.g., 35 students × 200 GB = 7 TB). By default, MorphoCloud admins exchange 10,000 SU for 10 TB of JS2 storage. If you need more, request an additional storage exchange on your ACCESS allocation. |
-| `INSTANCE_SHELVING_TIMEOUT_HRS` | `4` | Hours before an idle instance is automatically shelved. Increase if your labs regularly exceed 4 hours. Students can extend their session by 4 hours using the in-browser popup that appears 30 minutes before shelving. |
+| `INSTANCE_SHELVING_TIMEOUT_HRS` | `4` | Hours an instance stays up before it is automatically shelved. Increase if your labs regularly run longer. A popup appears on the desktop 30 minutes before shelving; accepting it — or clicking the **ExtendInstanceSession** desktop icon — restarts the full countdown. **Set this before anyone runs `/create`:** instances that are already running keep the value they were built with for their popup, while the shelving schedule picks up the new value straight away, so changing it mid-course leaves existing instances warning at the wrong time. |
 | `MORPHOCLOUD_MAX_TOTAL_INSTANCES` | enrollment + 1 | A cap on how many instances your allocation runs at once. It comes from the enrollment you gave on the intake form, plus one slot for the small server that runs your course's automation — that server counts as an instance in your allocation. If your enrollment grew, set this to **total participants (students *and* instructors) + 1**. |
 
 To change: click the variable name → ✏️ pencil icon → update → **Save**. The new value applies to the next `/create`.
@@ -95,6 +100,8 @@ Students manage their instances by posting commands as issue comments:
 | `/unshelve` | Resume a shelved instance |
 | `/email` | Resend the credential email |
 | `/delete_instance` | Remove a stuck instance — must be followed by `/create` to start fresh |
+
+> **One command at a time.** Each command reacts 🚀 when it starts and 👍 when it finishes. One command runs while a second may wait — send a third before those finish and the waiting one is cancelled without running. Wait for the 👍 before sending the next. When a command is dropped the issue gets a **Command Dropped ⚠️** comment naming the one to send again.
 
 Students can ask for help by mentioning you (`@<your-github-handle>`) or `@MorphoCloud/morphocloud-admins` in an issue comment.
 
