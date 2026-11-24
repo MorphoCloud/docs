@@ -1,17 +1,34 @@
-# Requesting and Creating Your Instance
+# Getting Started
 
-Once you've accepted your GitHub organization invitation, requesting and using an
-instance is the same for all access types.
+Once you have accepted your GitHub organization invitation (see
+[how to join](../README.md#1-individual-access)), everything happens on the portal.
 
-1. Open a new issue in the [Instances repository](https://github.com/MorphoCloud/Instances/issues/new/choose) using the **Instance Request** template (individual users).
-2. An automatic validation check runs on your issue. **Opening the issue does not provision anything** — once the check posts a ✅ confirmation comment, post `/create` as a comment to provision your instance.
-3. When your instance is online you'll receive an email with the connection URL and credentials. See [Connecting](connecting.md).
+1. **Sign in.** Go to [portal.morphocloud.org](https://portal.morphocloud.org)
+   and sign in with GitHub. The first time, GitHub asks you to authorize the
+   **MorphoCloud Portal** app; press **Authorize**.
+2. **Create your storage.** Press **Create my storage**. You do this once. Your
+   storage, MyDrive, holds 100 GB and stays when an instance is deleted. See
+   [Your storage](data-and-storage.md). If you were a member before
+   November 2026, your storage already exists.
+3. **Create your instance.** Choose an instance type and press **Create
+   instance**. We advise the default, `g3.large`; see
+   [choosing a type](gpu-and-known-issues.md#how-to-choose-a-gpu-instance).
+   - When a machine of that type is free, the instance is ready in 5 to 10
+     minutes. When other requests are queued ahead, it takes longer.
+   - The card shows the setup steps, and an email tells you when the instance is
+     ready.
+4. **Connect.** The card shows the access details. See [Connecting](connecting.md).
 
-> **Workshop participants** do not open individual issues — the workshop organizer provisions instances for everyone and distributes the credentials.
+You have one instance at a time. You use only the portal's buttons; you don't
+type commands on GitHub.
 
-**Concurrent-instance limit:** an organization member can have at most **two** instances at once — e.g. two personal instances, or one course and one personal instance.
+**Resource availability:** JetStream2 is a shared national resource, so Create
+and Unshelve can wait or fail when no machine of that type is free. The line at
+the top of the portal shows how many machines of each type are free. See
+[GPU notes & known issues](gpu-and-known-issues.md#availability-can-block-creating-or-unshelving).
 
-**Resource availability:** JetStream2 is a shared national resource, so `/create` (and `/unshelve`) can wait when a flavor is at capacity. Check [real-time availability](https://morphocloud.org) before you start. See [GPU notes & known issues](gpu-and-known-issues.md).
+> **Workshop participants** don't create instances: the workshop organizer
+> gives you the connection details.
 
 ---
 
