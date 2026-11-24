@@ -37,7 +37,7 @@ MorphoCloud does not provide the security controls necessary for Human Subject R
 - **No Recovery Services:** MorphoCloud does not provide data backup, mirroring, or recovery services.
 - **Risk of Loss:** All data stored on the Service is at risk of loss due to hardware failure, software error, or administrative action.
 - **Primary Copies:** Users are encouraged to maintain primary copies of all data, code, and results on their own institutional or personal storage.
-- **Automatic Destruction:** Upon the expiration of your instance's lifespan, or of the MorphoCloud project allocation that hosts the Service, all resources (instances and volumes) will be permanently destroyed and are NOT recoverable.
+- **Automatic Destruction:** When your storage term and its read-only period end, or when the MorphoCloud project allocation that hosts the Service expires, all resources (instances and storage) will be permanently destroyed and are NOT recoverable. Instances are also deleted automatically, for example when they stay shelved for more than 28 days.
 
 ---
 
@@ -55,7 +55,7 @@ Users are strictly prohibited from the following, which are examples and not an 
 
 ## 6. Suspension, Termination, and Enforcement
 
-- **Discretionary Action:** The MorphoCloud team reserves the right to suspend, restrict, throttle, or permanently terminate any account, session, instance, or other access to the Service — and to delete any associated instances, volumes, and data — at any time, with or without cause, and with or without prior notice, at its sole discretion.
+- **Discretionary Action:** The MorphoCloud team reserves the right to suspend, restrict, throttle, or permanently terminate any account, session, instance, or other access to the Service — and to delete any associated instances, storage, and data — at any time, with or without cause, and with or without prior notice, at its sole discretion.
 - **Automated and Bot Traffic:** The MorphoCloud team may detect, block, rate-limit, or permanently bar any automated, scripted, or non-human access, and any access it determines to be abusive, without regard to the identity or registration status of the source and without prior notice.
 - **No Obligation to Explain:** The MorphoCloud team is under no obligation to provide a reason, warning, hearing, appeal, or cure period before or after taking any action under this Section.
 - **No Liability for Enforcement:** To the maximum extent permitted by law, the Protected Parties shall have no liability of any kind for any loss, damage, lost data, lost research progress, lost compute time, or other consequence arising from any suspension, restriction, termination, deletion, or blocking action taken under these Terms, whether or not a violation actually occurred. For purposes of these Terms, **"Protected Parties"** means the MorphoCloud team and project, the institution(s) that host or operate the underlying infrastructure, the providers of that infrastructure, and the agencies that fund the Service, together with their respective institutions, officers, employees, and agents.

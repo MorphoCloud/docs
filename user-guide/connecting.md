@@ -1,39 +1,49 @@
 # Connecting to Your Instance
 
-When your instance is ready you receive an email with connection credentials.
-**Each time your instance comes back online after shelving, a new email is sent —
-the connection addresses can change between sessions**, so always use the most
-recent email. Lost it? Post `/email` on your issue to resend it.
+When your instance is ready, its card on the
+[portal](https://portal.morphocloud.org) shows the access details:
 
-You have two ways to reach the graphical desktop; most people use both.
+- **Web connect:** press **Open in browser** to open the desktop in your browser.
+- **SSH:** `ssh exouser@<address>`
+- **TurboVNC:** `<address>:1`
+- **Username:** `exouser`
+- **Passphrase:** press **Show** to see it. The whole phrase, spaces included, is
+  the passphrase.
 
-## Option 1 — Web browser (Guacamole)
+The address changes every time the instance is unshelved. Always use the one on
+the card.
 
-Click the **Web connect** link in the email. No software to install. Guacamole
-provides a side toolbar (`Ctrl`/`Cmd`+`Alt`+`Shift`) for clipboard access and
-[file transfers](file-transfer.md). The desktop includes shortcuts to 3D Slicer,
-SlicerMorph, and your MyData storage, plus a right-click menu for display and
-resolution settings.
+## Option 1 — Web connect (in the browser)
 
-*Limitations:* font and display scaling can be imprecise, and the clipboard is
-cumbersome to use.
+Press **Open in browser** on the card. No software to install. Web connect signs
+you in by itself; if it shows a sign-in page instead, the desktop was not ready
+yet: sign in with `exouser` and the passphrase.
+
+The desktop's shortcuts start at the top-left. They include 3D Slicer and your
+MyDrive folders.
+
+*Limitations:* font and display scaling can be imprecise. To move files, use
+**Open my files** on the portal ([Transferring files](file-transfer.md)).
 
 ## Option 2 — TurboVNC (recommended for visualization)
 
 Download and install [TurboVNC](https://github.com/TurboVNC/turbovnc/releases)
-(expand **Assets** and pick the package for your OS). Connect using the **VNC
-address** and passphrase from the credentials email. The passphrase is the same one
-used for the web (Guacamole) connection.
+(expand **Assets** and pick the package for your OS); the **TurboVNC** link on the
+card opens the same page. Connect to the TurboVNC address on the card
+(`<address>:1`) with the passphrase.
 
 *Benefits:* much better image quality, proper display scaling, and native
-copy/paste. *Limitation:* no file transfer — use Guacamole or `scp` for that.
+copy/paste.
 
-**Best practice:** use both in tandem — Guacamole for file transfers, TurboVNC for
-interactive 3D visualization.
+## SSH
 
-> **Save your work** inside your home directory (Desktop, Documents, Downloads, or
-> anywhere under `~`) or in `/media/volume/MyData`. See
-> [Where your data is stored](data-and-storage.md).
+Connect with `ssh exouser@<address>` and the passphrase. SSH is also how you
+copy large amounts of data with `scp`, `sftp` or `rsync`; see
+[Transferring files](file-transfer.md).
+
+> **Save your work** in Desktop, Documents or Downloads. These folders are in your
+> storage and are kept when the instance is deleted. See
+> [Your storage](data-and-storage.md).
 
 ---
 
