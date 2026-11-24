@@ -56,8 +56,8 @@ yet, click **Continue at join** and sign in with ORCID and GitHub.
    the default, `g3.large`; see
    [choosing a type](gpu-and-known-issues.md#how-to-choose-a-gpu-instance).
    - The portal first checks your request (usually a minute or two). Creating
-     the instance then takes about 10 minutes, longer when other requests are
-     queued ahead.
+     the instance then usually takes about 10 minutes, sometimes 20 minutes or
+     more, and longer when other requests are queued ahead.
    - The card shows the setup steps, and an email tells you when the instance is
      ready.
 3. **Connect.** The card shows the access details. See [Connecting](connecting.md).

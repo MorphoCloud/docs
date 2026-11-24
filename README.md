@@ -34,7 +34,7 @@ The [Getting started](./user-guide/getting-started.md) page has every step in de
 For instructors or organizers running a short workshop (5 days max) where all participants need simultaneous access.
 
 **How to get access:**
-1. The workshop organizer, who must already be a MorphoCloud member, clicks **MorphoCloud in Workshops →** on [morphocloud.org](https://morphocloud.org). It opens [join.morphocloud.org/workshop](https://join.morphocloud.org/workshop). There they sign in with their [ORCID iD](https://orcid.org) and are added to the Workshop Organizers team on GitHub.
+1. The workshop organizer, who must already be a MorphoCloud member, clicks **MorphoCloud in Workshops →** on [morphocloud.org](https://morphocloud.org). It opens [join.morphocloud.org/workshop](https://join.morphocloud.org/workshop). There they sign in with their [ORCID iD](https://orcid.org) and are added to the **MorphoCloudWorkshopOrganizers** team on GitHub.
 2. The organizer opens a **Workshop Request** issue in the [MorphoCloud Instances repository](https://github.com/MorphoCloud/Instances/issues/new/choose) and fills in the workshop details (dates, number of participants).
 3. Once the MorphoCloud team approves the request, instances are provisioned for each participant — the organizer receives all connection credentials by email and is responsible for distributing them to participants.
 
