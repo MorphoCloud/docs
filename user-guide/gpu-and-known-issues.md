@@ -51,6 +51,17 @@ your previous files are **not** carried over, so [back them up](file-transfer.md
 
 ## Known issues
 
+### nnInteractive: restart Slicer after its server is installed
+
+The first time you use **nnInteractive**, Slicer installs the nnInteractive server.
+When the installation finishes, **quit Slicer and start it again** before you
+segment. Without the restart, starting nnInteractive fails with:
+
+> Could not start nnInteractive (local mode): 'numpy.ufunc' object has no attribute '\_\_module\_\_'
+
+After the restart it works on every GPU flavor. You only need to do this once per
+instance.
+
 ### Large-volume rendering stalls GPU instances (≥ 4096 voxels)
 
 **On GPU instances, 3D Slicer's interactivity drops dramatically — sometimes to the
