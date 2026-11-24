@@ -17,7 +17,8 @@ To bring in datasets from MorphoSource, use the
 1. On the [portal](https://portal.morphocloud.org), press **Open my files**.
 2. **Upload:** drag files or folders onto the page. If an upload is interrupted,
    drop the same files again and it resumes.
-3. **Download:** open a folder and download the files you need.
+3. **Download:** open a folder and click a file.
+4. You can also rename, move and delete files and folders on this page.
 
 This works at any time, whether or not your instance is running. There is no
 search.

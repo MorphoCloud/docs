@@ -19,15 +19,13 @@ MorphoCloud has three access pathways depending on how you will use it.
 For researchers and students who want a personal instance for their own work.
 
 **How to get access:**
-1. Go to [join.morphocloud.org](https://join.morphocloud.org).
-2. Sign in with your [ORCID iD](https://orcid.org), then with your GitHub account. Both sign-ins are required. If you don't have an ORCID iD yet, you can create one during the sign-in.
-3. Fill in the short form. Write your institution's full name, without abbreviations.
-4. Confirm your email address by clicking the link we send you. GitHub then sends you an invitation to the MorphoCloud organization.
-5. Accept the invitation on your [GitHub organizations page](https://github.com/settings/organizations). The welcome email follows.
+1. On [morphocloud.org](https://morphocloud.org), click **New user? Join →**. It opens [join.morphocloud.org](https://join.morphocloud.org).
+2. Click **Sign in with ORCID**. After ORCID, sign in with GitHub. Both sign-ins are required.
+3. Fill in the form and press **Submit**.
+4. Click the verification link in the email we send you. This sends your GitHub invitation.
+5. Sign in to the [portal](https://portal.morphocloud.org) with GitHub. The portal shows your invitation; accept it, and the portal opens your dashboard.
 
-Each ORCID iD can be linked to one GitHub account, and each GitHub account to one ORCID iD. If you have already joined, you don't register again; you may be asked to sign in once.
-
-> Your email is added to a low-volume MorphoCloud announcement list (outages, service updates, upcoming events).
+The [Getting started](./user-guide/getting-started.md) page has every step in detail.
 
 ---
 
@@ -36,7 +34,7 @@ Each ORCID iD can be linked to one GitHub account, and each GitHub account to on
 For instructors or organizers running a short workshop (5 days max) where all participants need simultaneous access.
 
 **How to get access:**
-1. The workshop organizer goes to [morphocloud.org](https://morphocloud.org), clicks **Use MorphoCloud in your workshop**, and signs in with their [ORCID iD](https://orcid.org). Once verified, they are added to the **WorkshopOrganizers** GitHub team.
+1. The workshop organizer, who must already be a MorphoCloud member, clicks **MorphoCloud in Workshops →** on [morphocloud.org](https://morphocloud.org). It opens [join.morphocloud.org/workshop](https://join.morphocloud.org/workshop). There they sign in with their [ORCID iD](https://orcid.org) and are added to the Workshop Organizers team on GitHub.
 2. The organizer opens a **Workshop Request** issue in the [MorphoCloud Instances repository](https://github.com/MorphoCloud/Instances/issues/new/choose) and fills in the workshop details (dates, number of participants).
 3. Once the MorphoCloud team approves the request, instances are provisioned for each participant — the organizer receives all connection credentials by email and is responsible for distributing them to participants.
 
@@ -109,7 +107,7 @@ Your files are kept in your storage, **MyDrive** (100 GB, no backup), not on the
 
 - **MorphoCloud Chatbot:** on the [portal](https://portal.morphocloud.org). It answers questions about MorphoCloud, your instance and 3D Slicer. Its **Send to the MorphoCloud team** button sends the conversation to the team.
 - **Email:** [portal@morphocloud.org](mailto:portal@morphocloud.org).
-- **Community:** [MorphoCloud Discussions](https://github.com/orgs/MorphoCloud/discussions). Ask in **Q&A**, and watch **Announcements** for service updates.
+- **Community:** [MorphoCloud Discussions](https://github.com/orgs/MorphoCloud/discussions), for members only: sign in to GitHub first, or the page shows 404. Ask in **Q&A**, and watch **Announcements** for service updates.
 
 MorphoCloud's emails come from **no-reply@morphocloud.org**; add it to your safe senders.
 

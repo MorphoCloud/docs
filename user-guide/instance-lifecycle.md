@@ -28,8 +28,9 @@ A running instance shelves itself when its session ends.
 - A session is **4 hours**, or **2 hours** on `g3.xl`, `g4.xl`, `r3.large` and
   `r3.xl`.
 - The card counts down to it ("Shelves automatically in …").
-- To start a new session, press **Extend session** on the card, or **Yes** on the
-  reminder that appears on the instance's desktop.
+- To start a new session, press **Extend session** on the card. About 30 minutes
+  before the session ends, the instance's desktop also shows an **Automatic
+  Instance Shelving** reminder; press **Yes** to keep the instance running.
 - Unshelve starts a new session.
 
 Running programs are closed when the instance shelves. Save your work in

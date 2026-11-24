@@ -27,4 +27,5 @@ Everything happens on the portal: [portal.morphocloud.org](https://portal.morpho
 Ask the **MorphoCloud Chatbot** on the [portal](https://portal.morphocloud.org);
 its **Send to the MorphoCloud team** button sends the conversation to the team.
 You can also email [portal@morphocloud.org](mailto:portal@morphocloud.org) or ask
-in [MorphoCloud Discussions](https://github.com/orgs/MorphoCloud/discussions).
+in [MorphoCloud Discussions](https://github.com/orgs/MorphoCloud/discussions) (members only: sign in to
+GitHub first).
