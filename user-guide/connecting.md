@@ -23,8 +23,9 @@ The desktop's shortcuts start at the top-left. They include 3D Slicer and your
 MyDrive folders.
 
 **Copy and paste** between your computer and the desktop works in **Chrome** and
-**Edge**. It does not work in **Firefox** or **Safari**; there, use TurboVNC
-(below) when you need copy and paste.
+**Edge**. The first time, the browser asks whether the site may use the
+clipboard; press **Allow**. Copy and paste does not work in **Firefox** or
+**Safari**; there, use TurboVNC (below) when you need it.
 
 *Limitations:* font and display scaling can be imprecise. To move files, use
 **Open my files** on the portal ([Transferring files](file-transfer.md)).
