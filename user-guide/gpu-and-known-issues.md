@@ -44,16 +44,23 @@ old instance, such as the Slicer extensions you installed, is lost.
 
 ## Known issues
 
-### nnInteractive: restart Slicer after its server is installed
+### nnInteractive: choose Full, then restart Slicer once
 
-The first time you use **nnInteractive**, Slicer installs the nnInteractive server.
-When the installation finishes, **quit Slicer and start it again** before you
-segment. Without the restart, starting nnInteractive fails with:
+The first time you open **nnInteractive** on an instance, a dialog asks what to
+install. Click **Full (local + remote)**. The highlighted default, **Client only
+(remote)**, needs a separate server, so do not just press Enter. The installation
+takes about two minutes.
+
+When it finishes, **quit Slicer and start it again** before you segment. The
+installation replaces Python packages that the running Slicer has already loaded,
+so without the restart nnInteractive does not start: it can stop responding, or
+fail with:
 
 > Could not start nnInteractive (local mode): 'numpy.ufunc' object has no attribute '\_\_module\_\_'
 
 After the restart it works on every GPU type. You only need to do this once per
-instance.
+instance. Step-by-step:
+[nnInteractive tutorial](https://github.com/SlicerMorph/Tutorials/blob/main/MorphoCloud/NNInteractive.MD).
 
 ### Large-volume rendering stalls GPU instances (≥ 4096 voxels)
 
