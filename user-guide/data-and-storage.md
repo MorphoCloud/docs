@@ -24,12 +24,13 @@ On an instance, MyDrive is at **`/media/share/MyDrive`**. Your **Desktop**,
 - **Open my files** uploads and downloads files at any time, with or without an
   instance. See [Transferring files](file-transfer.md).
 - **Reset my storage** deletes every file and folder in your storage. It cannot be
-  undone.
+  undone. It is available only while your instance is shelved or deleted.
 
 ## How long your storage is kept
 
-The portal shows how much space you use and your storage's end date. Storage is
-kept for **120 days** from the day you create it.
+The portal shows how much space you use and the date your storage expires
+("Expires on …"); this guide calls it the end date. Storage is kept for
+**120 days** from the day it is created.
 
 - **Reminders:** we email you 14 days, 7 days and 1 day before the end date.
 - **Ask to keep my storage:** from 14 days before the end date, the portal offers
@@ -46,10 +47,10 @@ kept for **120 days** from the day you create it.
 - **After the 15 days** your storage and all its files are deleted. You can then
   create a new, empty storage.
 
-## If you used MorphoCloud before November 2026
+## If you had files in MorphoCloud before November 2026
 
-Your Desktop, Documents and Downloads are in MyDrive under the same names.
-Everything else from your earlier storage is in the **`MyOldData`** folder in
+Your storage was created for you, with your files in it. Your Desktop,
+Documents and Downloads are in MyDrive under the same names. Everything else from your earlier storage is in the **`MyOldData`** folder in
 MyDrive. These were not copied: the old Slicer installation, R libraries, and
 hidden settings folders in the home directory.
 

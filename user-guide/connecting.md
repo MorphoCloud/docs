@@ -19,8 +19,7 @@ Press **Open in browser** on the card. No software to install. Web connect signs
 you in by itself; if it shows a sign-in page instead, the desktop was not ready
 yet: sign in with `exouser` and the passphrase.
 
-The desktop's shortcuts start at the top-left. They include 3D Slicer and your
-MyDrive folders.
+The desktop shows **3D Slicer** and your **Home** folder in its top-left corner.
 
 **Copy and paste** between your computer and the desktop works in **Chrome** and
 **Edge**. The first time, the browser asks whether the site may use the
