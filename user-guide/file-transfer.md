@@ -10,6 +10,9 @@ There are two ways to move files between your computer and your storage (MyDrive
 To bring in datasets from MorphoSource, use the
 [MorphoSource Media Cart](data-and-storage.md#morphosource-media-cart).
 
+To copy your files from Google Drive, Dropbox, Box or OneDrive straight into
+MyDrive, see [Copying from cloud storage](cloud-storage-rclone.md).
+
 ---
 
 ## Method 1 — Open my files (on the portal)

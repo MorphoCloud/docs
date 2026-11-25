@@ -59,6 +59,7 @@ Once you have joined, the **[User Guide](./user-guide/)** covers day-to-day use:
 - **[Connecting](./user-guide/connecting.md)** — Web connect in the browser, TurboVNC, and SSH.
 - **[Your storage (MyDrive)](./user-guide/data-and-storage.md)** — what is kept, how long, and the MorphoSource Media Cart.
 - **[Transferring files](./user-guide/file-transfer.md)** — Open my files on the portal, and `scp`/`sftp`/`rsync` for bulk data.
+- **[Copying from cloud storage](./user-guide/cloud-storage-rclone.md)** — copy your files from Google Drive, Dropbox, Box or OneDrive into MyDrive with rclone.
 - **[Managing your instance](./user-guide/instance-lifecycle.md)** — Shelve, Unshelve, sessions, Delete, and changing the instance type.
 - **[GPU notes & known issues](./user-guide/gpu-and-known-issues.md)** — choosing an instance type, and known problems.
 

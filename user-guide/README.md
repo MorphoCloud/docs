@@ -12,6 +12,7 @@ Everything happens on the portal: [portal.morphocloud.org](https://portal.morpho
 - [Connecting](connecting.md) — Web connect in the browser, TurboVNC, and SSH.
 - [Your storage (MyDrive)](data-and-storage.md) — 100 GB that stays when an instance is deleted, how long it is kept, and the MorphoSource Media Cart.
 - [Transferring files](file-transfer.md) — Open my files on the portal, and `scp`/`sftp`/`rsync` for bulk data.
+- [Copying from cloud storage](cloud-storage-rclone.md) — copy your files from Google Drive, Dropbox, Box or OneDrive into MyDrive with rclone.
 
 ## Managing your instance
 - [Managing your instance](instance-lifecycle.md) — Shelve, Unshelve, sessions, Delete, and changing the instance type.
