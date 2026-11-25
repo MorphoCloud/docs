@@ -68,7 +68,7 @@ Instructors setting up a course should follow the **[instructor guide](./instruc
 
 ## Instance Types
 
-Your files are kept in your storage, **MyDrive** (100 GB, no backup), not on the instance. On an instance, your Desktop, Documents and Downloads folders are in MyDrive, at `/media/share/MyDrive`. Only these folders are kept when the instance is deleted ([details](./user-guide/data-and-storage.md)).
+Your files are kept in your storage, **MyDrive** (100 GB, no backup), not on the instance. On an instance, MyDrive is at `/media/share/MyDrive`, and your Desktop, Documents and Downloads folders are in it. Everything in MyDrive is kept when the instance is deleted; anything saved anywhere else is lost with the instance ([details](./user-guide/data-and-storage.md)).
 
 | Type | RAM | CPUs | GPU | Best for |
 |--------|----:|-----:|-----|----------|
