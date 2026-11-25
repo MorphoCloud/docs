@@ -51,8 +51,8 @@ install. Click **Full (local + remote)**. The highlighted default, **Client only
 (remote)**, needs a separate server, so do not just press Enter. The installation
 takes about two minutes.
 
-When it finishes, **quit Slicer and start it again** before you segment. The
-installation replaces Python packages that the running Slicer has already loaded,
+When it finishes, **quit Slicer and start it again** before you segment, even if
+Slicer already restarted once during the installation. The installation replaces Python packages that the running Slicer has already loaded,
 so without the restart nnInteractive does not start: it can stop responding, or
 fail with:
 
