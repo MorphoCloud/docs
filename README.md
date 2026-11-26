@@ -58,7 +58,7 @@ Once you have joined, the **[User Guide](./user-guide/)** covers day-to-day use:
 - **[Getting started](./user-guide/getting-started.md)** — sign in to the portal, create your storage and your instance.
 - **[Connecting](./user-guide/connecting.md)** — Web connect in the browser, TurboVNC, and SSH.
 - **[Your storage (MyDrive)](./user-guide/data-and-storage.md)** — what is kept, how long, and the MorphoSource Media Cart.
-- **[Transferring files](./user-guide/file-transfer.md)** — Open my files on the portal, and `scp`/`sftp`/`rsync` for bulk data.
+- **[Transferring files](./user-guide/file-transfer.md)** — Open my files on the portal for files and whole folders of any size; `scp`/`sftp`/`rsync` if you prefer the command line.
 - **[Managing your instance](./user-guide/instance-lifecycle.md)** — Shelve, Unshelve, sessions, Delete, and changing the instance type.
 - **[GPU notes & known issues](./user-guide/gpu-and-known-issues.md)** — choosing an instance type, and known problems.
 
