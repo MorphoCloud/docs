@@ -36,7 +36,7 @@ Download and install [TurboVNC](https://github.com/TurboVNC/turbovnc/releases)
 card opens the same page. Connect to the TurboVNC address on the card
 (`<address>:1`) with the passphrase.
 
-*Benefits:* much better image quality, proper display scaling, and native
+*Benefits:* better image quality and responsiveness, and native
 copy/paste.
 
 ## SSH
