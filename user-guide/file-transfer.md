@@ -4,8 +4,8 @@ There are two ways to move files between your computer and your storage (MyDrive
 
 | Method | Best for | Needs |
 |--------|----------|-------|
-| **Open my files** on the portal | Most uploads and downloads, with or without an instance | A web browser |
-| **`scp` / `sftp` / `rsync`** | Bulk data, very large datasets | A running instance, a terminal (or an SFTP app), and the SSH details on the card |
+| **Open my files** on the portal | Uploads and downloads of any size, whole folders included, with or without an instance | A web browser |
+| **`scp` / `sftp` / `rsync`** | Members who prefer the command line or an SFTP app | A running instance, a terminal (or an SFTP app), and the SSH details on the card |
 
 To bring in datasets from MorphoSource, use the
 [MorphoSource Media Cart](data-and-storage.md#morphosource-media-cart).
@@ -15,20 +15,23 @@ To bring in datasets from MorphoSource, use the
 ## Method 1 — Open my files (on the portal)
 
 1. On the [portal](https://portal.morphocloud.org), press **Open my files**.
-2. **Upload:** drag files or folders onto the page. If an upload is interrupted,
-   drop the same files again and it resumes.
+2. **Upload:** drag files or folders onto the page. A whole folder uploads in one
+   go, with several files sent at the same time, so large datasets upload
+   efficiently. If an upload is interrupted, drop the same files again and it
+   resumes.
 3. **Download:** open a folder and click a file.
 4. You can also rename, move and delete files and folders on this page.
 
-This works at any time, whether or not your instance is running. There is no
-search.
+This works at any time, whether or not your instance is running, and it is the
+way we recommend for datasets of any size. There is no search.
 
 ---
 
-## Method 2 — `scp` / `sftp` / `rsync` (command line, bulk)
+## Method 2 — `scp` / `sftp` / `rsync` (command line)
 
-Your instance accepts SSH connections, which is the fast way to move large
-datasets. Use the details on your instance's card:
+Your instance accepts SSH connections, so you can also use `scp`, `sftp` or
+`rsync` if you prefer them. They are not much faster than **Open my files**, and
+they need a running instance. Use the details on your instance's card:
 
 - **Host:** the address on the **SSH** line (`ssh exouser@<address>`)
 - **Username:** `exouser`
@@ -58,7 +61,7 @@ sftp exouser@<address>
 #   get -r results         # download
 ```
 
-**Large or resumable transfers — use `rsync`** (re-runs only copy what changed, and
+**Resumable transfers with `rsync`** (re-runs only copy what changed, and
 `-P` lets an interrupted transfer resume):
 ```bash
 rsync -avP ./my-dataset exouser@<address>:/media/share/MyDrive/

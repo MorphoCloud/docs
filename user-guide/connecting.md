@@ -41,8 +41,8 @@ copy/paste.
 
 ## SSH
 
-Connect with `ssh exouser@<address>` and the passphrase. SSH is also how you
-copy large amounts of data with `scp`, `sftp` or `rsync`; see
+Connect with `ssh exouser@<address>` and the passphrase. You can also copy
+files over SSH with `scp`, `sftp` or `rsync`; see
 [Transferring files](file-transfer.md).
 
 > **Save your work** in Desktop, Documents or Downloads. These folders are in your
