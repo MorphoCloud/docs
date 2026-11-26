@@ -6,7 +6,8 @@ When your instance is ready, its card on the
 - **Web connect:** press **Open in browser** to open the desktop in your browser.
 - **SSH:** `ssh exouser@<address>`
 - **TurboVNC:** `<address>:1`
-- **Username:** `exouser`
+- **Username:** `exouser`. Only SSH needs it, and the Web connect sign-in page
+  when that page appears. TurboVNC does not ask for a username.
 - **Passphrase:** press **Show** to see it. The whole phrase, spaces included, is
   the passphrase.
 
@@ -34,7 +35,8 @@ clipboard; press **Allow**. Copy and paste does not work in **Firefox** or
 Download and install [TurboVNC](https://github.com/TurboVNC/turbovnc/releases)
 (expand **Assets** and pick the package for your OS); the **TurboVNC** link on the
 card opens the same page. Connect to the TurboVNC address on the card
-(`<address>:1`) with the passphrase.
+(`<address>:1`). TurboVNC asks only for the passphrase; it does not ask for a
+username.
 
 *Benefits:* better image quality and responsiveness, and native
 copy/paste.
